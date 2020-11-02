@@ -7,13 +7,10 @@ source-repo/
 _site/
 .sass-cache/
 Gemfile.lock
+package.json
 package-lock.json
 node_modules/
 yarn.lock
 .scripts/
 .layouts/
-_layouts/
-assets/
 raml2html-nmos-theme/
-
-
