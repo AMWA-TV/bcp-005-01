@@ -1,11 +1,23 @@
+if: type != push
 language: node_js
 node_js:
-  - 8
+  - 11
+before_install:
+  - sudo apt-get install python3-pip python3-setuptools
 install:
   - "make distclean"
   - "make build-tools"
 script:
-  - "make lint"
+  - "make clean"
+  - "make"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: gh-pages
 branches:
-  except:
+  only:
     - gh-pages
+    - /.*/
