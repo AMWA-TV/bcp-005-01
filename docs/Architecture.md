@@ -34,7 +34,7 @@ An application which controls IPMX-compatible NMOS Nodes: discovers them, makes 
 
 **IPMX Controller**
 
-HTTP RESTful API which provides information about and control of an IPMX-driven device associated with a Sender or a Receiver.
+An IS-04 Control. It provides an HTTP RESTful API (IS-XX) which provides information about and control of an IPMX-driven device associated with an IPMX device.
 
 **Media Essentials**
 
@@ -76,7 +76,7 @@ Figure 2 shows a Container Level diagram. The diagram shows the technologies use
 
 ## IPMX Gateway Encoder Component Diagram
 
-Figure 3 shows a component diagram for an IPMX Gateway Encoder.  This diagram illustrates the role of a new architectural component  shown in tan.  This is a IS-04 Control that provides a RESTful API to support  required User-Stories. This new component is called an IPMX Controller. It interacts with an HMIC Source by presenting an EDID to the source.  It also is responsible for setup of IS-04 resources as described later in this document with Sequence Diagrams. The IPMX provides a proposed API called IS-XX.
+Figure 3 shows a component diagram for an IPMX Gateway Encoder. This diagram illustrates the role of a new architectural component shown in tan. This is a IS-04 Control that provides a RESTful API to support required User-Stories. This new component is called an IPMX Controller. It interacts with an HDMI Source by presenting an EDID to the source. It also is responsible for setup of IS-04 resources as described later in this document with Sequence Diagrams. The IPMX Controller provides a proposed API called IS-XX.
 
 ![Component Diagram of an IPMX Gateway Encoder](images/ipmx_encoder_component_diagram.png)
 
@@ -104,7 +104,7 @@ Table 1: Sequence Diagram Steps for Figure 5
 
 | Sequence Step | Description | Notes |
 | ---  | ---         | ---         |
-| 1: Put Media Essentials Set | The IPMX Control System puts the media essentials required video and audio formats using a IS-XX endpoint for media essentions. | RAML for the endpoints is provided as a separate document including specifications for Work-in-Progess elements such as media_essentions_set. |
+| 1: Put Media Essentials Set | The IPMX Control System puts the media essentials required video and audio formats using a IS-XX endpoint for media essentials. | RAML for the endpoints is provided as a separate document including specifications for Work-in-Progess elements such as media_essentions_set. |
 | 2: Present EDID | The IPMX Controller sends the EDID information to the HDMI Physical Source using the device’s DDC. | |
 | 3: Update Sources, Flows and Senders | The IPMX Controller updates the IS-04 Sources, Flows and Senders with information from the Media Essentials Set. | |
 
@@ -126,7 +126,7 @@ Table 2: Sequence Diagram Steps for Figure 6
 #### NMOS IS-04 IS-05 Perspective
 
 Once the IPMX Encoder and Decoder Gateways have come online and processed the EDID information as shown in Figures 5 and 6 the system is ready to process IS-05 connections.
-Figure 7 shows a sequence diagram for setting up a connection between an IPMX Encoder and two IPMX decoders. In this illustration the Pro AV Person requests via an IPMX Control System that an output stream from the IPMX Encoder is sent to two IPMX Decoders.  Table 3 describes the steps with details.  Note that although we show an external choosing how to connect a sender to receivers this choice  can be performed by a control element internal to any of the NMOS Nodes as well and in this way cover User Stories 1, 3, and 4.
+Figure 7 shows a sequence diagram for setting up a connection between an IPMX Encoder and two IPMX decoders. In this illustration the Pro AV Person requests via an IPMX Control System that an output stream from the IPMX Encoder is sent to two IPMX Decoders. Table 3 describes the steps with details. Note that as part of IS-05 we will send across the SDP file with IP parameters and also media format. The media format is not used to configure the HDMI outputs. Media information is sent via HDMI info frames that are embedded in the HDMI stream.
 
 ![Sequence Diagram for User-Story 1 from NMOS Perspective](images/connection_management_sequence.png)
 
@@ -142,11 +142,11 @@ Table 3: Details for Sequence Diagram Steps for Figure 6
 
 ## User Story 2 - User Configured Graphics Mode
 
-The section above covered User-Stories 1,3, and four.  User Story 2 requires an additional step related to HDMI Hot Plug Detect:
+The section above covered User Stories 1, 3, and 4. User Story 2 requires an additional step related to HDMI Hot Plug Detect:
 
 > User Story 2. As a user with a computer that is connected as above, I'd like to change the resolution of my display to support graphics mode that is lower resolution, so that my graphic intensive program plays back more smoothly.
 
-Figure 8 shows the EDID processing required for this User-Story.  The IPMX Controller (of type HDMI) is responsible for detecting a change in the video format sent by the HDMI source by monitoring changes to HDMI infoframes sent by the source. The IPMX Controller can either poll the changes in HDMI infoframes or cue off of an HDMI Hot-plug-detect event from the HDMI Source.
+Figure 8 shows the EDID processing required for this User Story. The IPMX Controller (of type HDMI) is responsible for detecting a change in the video format sent by the HDMI source by monitoring changes to HDMI infoframes sent by the source. The IPMX Controller can either poll the changes in HDMI infoframes or cue off of an HDMI Hot-plug-detect event from the HDMI Source.
 
 ![Sequence Diagram for User Configured Graphics Mode](images/infoframe_change_sequence.png)
 
@@ -156,7 +156,7 @@ Table 4: Details for User Configured Graphics Mode
 | ---  | ---         | ---         |
 | 0: Change Video Format | The computer user changes their video format | Note this would be done using the standard gui for control of an output monitor from Windows, Linux etc. |
 | 1: Change Infoframes | The HDMI Physical source changes it’s video mode in response to a user changing it’s video format. | |
-| 2: Detect InfoFrame Change | The IPMX Controller (HDMI type) is responsible for detecting the change in inforframes | Implementation of this detection is vendor specific but typically handled via a HPD interrupt or polling of the HDMI driver for the device’s HDMI input port. |
+| 2: Detect InfoFrame Change | The IPMX Controller is responsible for detecting the change in inforframes | Implementation of this detection is vendor specific but typically handled via a HPD interrupt or polling of the HDMI driver for the device’s HDMI input port. |
 | 3: Update Sources, Flows and Senders | The IPMX Controller updates the Sources, Flows and Senders resources of IS-04 based on the new Video Format. | |
 
 ### NMOS IS-04 IS-05 Perspective
