@@ -146,7 +146,7 @@ The section above covered User Stories 1, 3, and 4. User Story 2 requires an add
 
 > User Story 2. As a user with a computer that is connected as above, I'd like to change the resolution of my display to support graphics mode that is lower resolution, so that my graphic intensive program plays back more smoothly.
 
-Figure 8 shows the EDID processing required for this User Story. The IPMX Controller (of type HDMI) is responsible for detecting a change in the video format sent by the HDMI source by monitoring changes to HDMI infoframes sent by the source. The IPMX Controller can either poll the changes in HDMI infoframes or cue off of an HDMI Hot-plug-detect event from the HDMI Source.
+Figure 8 shows the EDID processing required for this User Story. The IPMX Controller is responsible for detecting a change in the video format sent by the HDMI source by monitoring changes to HDMI infoframes sent by the source. The IPMX Controller can either poll the changes in HDMI infoframes or cue off of an HDMI Hot-plug-detect event from the HDMI Source.
 
 ![Sequence Diagram for User Configured Graphics Mode](images/infoframe_change_sequence.png)
 
