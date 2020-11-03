@@ -59,7 +59,9 @@ Each of the user stories applies to one or more network topology which describes
 
 Figure 1 shows one context diagram  for an IPMX HDMI Gateway System. An IT Staff Person responsible for setting up and administering an IPMX PRO AV System uses an external Control System (CS) . This CS interacts with the IPMX System via RESTful, SNMPV3, ssh, etc as described in [JT-NM-TR-1001:2-18](https://www.jt-nm.org/documents/JT-NM_TR-1001-1:2018_v1.0.pdf). Note that the architecture presented here does not require a centralized controller (i.e. all NMOS Network Topologies shown above are supported).
 
-![Context Diagram for EDID Connection Management with Central Control System](images/ipmx_context_diagram.png)
+| ![Context Diagram for EDID Connection Management with Central Control System](images/ipmx_context_diagram.png) |
+|:--:|
+| *Figure 1. Context Diagram for EDID Connection Management with Central Control System* |
 
 # Container Diagram
 
@@ -70,7 +72,9 @@ Figure 2 shows a Container Level diagram. The diagram shows the technologies use
 * An IPMX Gateway Encoder that is an IS-04 Node
 * Several IPMX Gateway Decoders that are also IS-04 Nodes.
 
-![Container Diagram for IPMX PRO AV System](images/ipmx_container_diagram.png)
+| ![Container Diagram for IPMX PRO AV System](images/ipmx_container_diagram.png) |
+|:--:|
+| *Figure 2. Container Diagram for IPMX PRO AV System* |
 
 # Component Diagrams
 
@@ -78,13 +82,17 @@ Figure 2 shows a Container Level diagram. The diagram shows the technologies use
 
 Figure 3 shows a component diagram for an IPMX Gateway Encoder.  This diagram illustrates the role of a new architectural component  shown in tan.  This is a IS-04 Control that provides a RESTful API to support  required User-Stories. This new component is called an IPMX Controller. It interacts with an HMIC Source by presenting an EDID to the source.  It also is responsible for setup of IS-04 resources as described later in this document with Sequence Diagrams. The IPMX provides a proposed API called IS-XX.
 
-![Component Diagram of an IPMX Gateway Encoder](images/ipmx_encoder_component_diagram.png)
+| ![Component Diagram of an IPMX Gateway Encoder](images/ipmx_encoder_component_diagram.png) |
+|:--:|
+| *Figure 3. Component Diagram of an IPMX Gateway Encoder* |
 
 ## IPMX Gateway Decoder Component Diagram
 
 Figure 4 shows a component diagram for an IPMX Gateway Decoder.  As in the IPMX Gateway Encoder, a new  IPMX Controller component is present.  For an IPMX Gateway Decoder  the IPMX Controller is responsible for reading the HDMI Monitor’s EDID, setting up IS-04 Decoder resources including populating the IS-04 receivers with values using the latest IS-04 Receiver Caps syntax. In addition, the IPMX Controller provides an IS-XX RESTful API to external components responsable for overall control of the Node.
 
-![Component Diagram of an IPMX Gateway Decoder](images/ipmx_decoder_component_diagram.png)
+| ![Component Diagram of an IPMX Gateway Decoder](images/ipmx_decoder_component_diagram.png) |
+|:--:|
+| *Figure 4. Component Diagram of an IPMX Gateway Decoder* |
 
 # Dynamic Aspects of the Architecture
 
@@ -98,7 +106,9 @@ With the above architecture, we can explore more deeply how we can realize the U
 
 Let’s choose an initialization Use-Case for the IPMX Gateway Encoder.  When an IPMX Gateway Encoder starts up, it should present an EDID to it’s HDMI monitor.  Referring to Figure 1, we can create a sequence diagram for this use-case from the EDID processing perspective, as shown in Figure 5, with associated steps described more fully in Table 1.
 
-![Sequence Diagram for IPMX Gateway Encoder Setup using EDID](images/encoder_setup.png)
+| ![Sequence Diagram for IPMX Gateway Encoder Setup using EDID](images/encoder_setup.png) |
+|:--:|
+| *Figure 5. Sequence Diagram for IPMX Gateway Encoder Setup using EDID* |
 
 Table 1: Sequence Diagram Steps for Figure 5
 
@@ -112,7 +122,9 @@ Table 1: Sequence Diagram Steps for Figure 5
 
 The second use-case for the EDID perspective shows an IPMX Gateway Decoder. Figure 6 and Table 2 provide a sequence diagram and associated details for this use-case.
 
-![Sequence Diagram for IPMX Gateway Decoder Setup using EDID](images/decoder_setup.png)
+| ![Sequence Diagram for IPMX Gateway Decoder Setup using EDID](images/decoder_setup.png) |
+|:--:|
+| *Figure 6. Sequence Diagram for IPMX Gateway Decoder Setup using EDID* |
 
 Table 2: Sequence Diagram Steps for Figure 6
 
@@ -128,7 +140,9 @@ Table 2: Sequence Diagram Steps for Figure 6
 Once the IPMX Encoder and Decoder Gateways have come online and processed the EDID information as shown in Figures 5 and 6 the system is ready to process IS-05 connections.
 Figure 7 shows a sequence diagram for setting up a connection between an IPMX Encoder and two IPMX decoders. In this illustration the Pro AV Person requests via an IPMX Control System that an output stream from the IPMX Encoder is sent to two IPMX Decoders.  Table 3 describes the steps with details.  Note that although we show an external choosing how to connect a sender to receivers this choice  can be performed by a control element internal to any of the NMOS Nodes as well and in this way cover User Stories 1, 3, and 4.
 
-![Sequence Diagram for User-Story 1 from NMOS Perspective](images/connection_management_sequence.png)
+| ![Sequence Diagram for User-Story 1 from NMOS Perspective](images/connection_management_sequence.png) |
+|:--:|
+| *Figure 7. Sequence Diagram for User-Story 1 from NMOS Perspective* |
 
 Table 3: Details for Sequence Diagram Steps for Figure 6
 | Sequence Step | Description | Notes |
@@ -148,7 +162,9 @@ The section above covered User-Stories 1,3, and four.  User Story 2 requires an 
 
 Figure 8 shows the EDID processing required for this User-Story.  The IPMX Controller (of type HDMI) is responsible for detecting a change in the video format sent by the HDMI source by monitoring changes to HDMI infoframes sent by the source. The IPMX Controller can either poll the changes in HDMI infoframes or cue off of an HDMI Hot-plug-detect event from the HDMI Source.
 
-![Sequence Diagram for User Configured Graphics Mode](images/infoframe_change_sequence.png)
+| ![Sequence Diagram for User Configured Graphics Mode](images/infoframe_change_sequence.png) |
+|:--:|
+| *Figure 8. Sequence Diagram for User Configured Graphics Mode* |
 
 Table 4: Details for User Configured Graphics Mode
 
@@ -175,7 +191,9 @@ Since detailed information that is provided by EDID is applicable only an IPMX D
 
 Figure 10 shows a sequence diagram based on Figure 4 for retrieving the information required by User-Stories 5 and 6. Table 5 provides details on relevant steps.
 
-![Sequence Diagram for Pro AV User Retrieving Raw and Parsed EDID Information](images/edid_retrieving_sequence.png)
+| ![Sequence Diagram for Pro AV User Retrieving Raw and Parsed EDID Information](images/edid_retrieving_sequence.png) |
+|:--:|
+| *Figure 9. Sequence Diagram for Pro AV User Retrieving Raw and Parsed EDID Information* |
 
 Table 5: Sequence Diagram Steps for Figure 10
 | Sequence Step | Description | Notes |
