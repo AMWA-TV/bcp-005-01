@@ -114,7 +114,7 @@ The second use-case for the EDID perspective shows an IPMX Gateway Decoder. Figu
 
 ![Sequence Diagram for IPMX Gateway Decoder Setup using EDID](images/decoder_setup.png)
 
-Table 2:  Sequence Diagram Steps for Figure 6
+Table 2: Sequence Diagram Steps for Figure 6
 
 | Sequence Step | Description | Notes |
 | ---  | ---         | ---         |
@@ -130,7 +130,7 @@ Figure 7 shows a sequence diagram for setting up a connection between an IPMX En
 
 ![Sequence Diagram for User-Story 1 from NMOS Perspective](images/connection_management_sequence.png)
 
-Table 2:  Details for Sequence Diagram Steps for Figure 6
+Table 3: Details for Sequence Diagram Steps for Figure 6
 | Sequence Step | Description | Notes |
 | ---  | ---         | ---         |
 | 1: Choose Sender and Receiver | The PRO AV Person interacts with the IPMX Control System to choose a set of receivers for a sender. | |
@@ -150,7 +150,7 @@ Figure 8 shows the EDID processing required for this User-Story.  The IPMX Contr
 
 ![Sequence Diagram for User Configured Graphics Mode](images/infoframe_change_sequence.png)
 
-Table 3. Details for User Configured Graphics Mode
+Table 4: Details for User Configured Graphics Mode
 
 | Sequence Step | Description | Notes |
 | ---  | ---         | ---         |
@@ -173,11 +173,11 @@ User stories 5 and 6 will be treated together since both can be realized using t
 
 Since detailed information that is provided by EDID is applicable only an IPMX Decoder a single Use-Case is described for retrieving EDID information from an IPMX Decoder.
 
-Figure 10 shows a sequence diagram based on Figure 4 for retrieving the information required by User-Stories 5 and 6.  Table 5 provides details on relevant steps.
+Figure 10 shows a sequence diagram based on Figure 4 for retrieving the information required by User-Stories 5 and 6. Table 5 provides details on relevant steps.
 
 ![Sequence Diagram for Pro AV User Retrieving Raw and Parsed EDID Information](images/edid_retrieving_sequence.png)
 
-Table 5:  Sequence Diagram Steps for Figure 10
+Table 5: Sequence Diagram Steps for Figure 10
 | Sequence Step | Description | Notes |
 | ---  | ---         | ---         |
 | 1: Read EDID | At startup or on change (Hot Plug Detect)  the HDMI Controller reads the monitor’s EDID. | |
