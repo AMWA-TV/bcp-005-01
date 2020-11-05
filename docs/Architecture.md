@@ -152,7 +152,7 @@ Table 3: Details for Sequence Diagram Steps for Figure 6
 | 3: Get receiver caps 2 | The IPMX Control system retrieves the receiver caps from the IPMX Decoder 2. | |
 | 4: Put Media Essentials Set | Based on the receiver capabilities a Media Essentials Set  is created with the best video format available (as required by the User-Story) | Create info needed for the encoder to create IS-04 resources. |
 | 5: Start Stream | The standard IS-05 mechanism is used to start the stream sending on the IPMX Encoder | |
-| 6-7: Receive Stream | IS-05 is used to make the connection to IPMX Decoders 1 and 2 | Note that as part of IS-05 we will send across the SDP file with IP parameters and also media format.  The media format is not used to configure the HDMI outputs.  Media information is sent via HDMI info frames that are embedded in the HDMI stream.
+| 6-7: Receive Stream | IS-05 is used to make the connection to IPMX Decoders 1 and 2 | |
 
 ## User Story 2 - User Configured Graphics Mode
 
