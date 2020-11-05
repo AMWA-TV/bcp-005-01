@@ -126,7 +126,7 @@ Table 2: Sequence Diagram Steps for Figure 6
 #### NMOS IS-04 IS-05 Perspective
 
 Once the IPMX Encoder and Decoder Gateways have come online and processed the EDID information as shown in Figures 5 and 6 the system is ready to process IS-05 connections.
-Figure 7 shows a sequence diagram for setting up a connection between an IPMX Encoder and two IPMX decoders. In this illustration the Pro AV Person requests via an IPMX Control System that an output stream from the IPMX Encoder is sent to two IPMX Decoders. Table 3 describes the steps with details. Note that as part of IS-05 we will send across the SDP file with IP parameters and also media format. The media format is not used to configure the HDMI outputs. Media information is sent via HDMI info frames that are embedded in the HDMI stream.
+Figure 7 shows a sequence diagram for setting up a connection between an IPMX Encoder and two IPMX Decoders. In this illustration the Pro AV Person requests via an IPMX Control System that an output stream from the IPMX Encoder is sent to two IPMX Decoders. Table 3 describes the steps with details.
 
 ![Sequence Diagram for User-Story 1 from NMOS Perspective](images/connection_management_sequence.png)
 
