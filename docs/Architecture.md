@@ -34,7 +34,7 @@ An application which controls IPMX-compatible NMOS Nodes: discovers them, makes 
 
 **IPMX Controller**
 
-An IS-04 Control. It provides an HTTP RESTful API (IS-XX) which provides information about and control of an IPMX-driven device associated with an IPMX device.
+An IS-04 Device Control. It provides an HTTP RESTful API (IS-XX) which provides information about and control of an IPMX-driven NMOS Device.
 
 **Media Essentials**
 
