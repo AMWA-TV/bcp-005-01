@@ -1,0 +1,91 @@
+#%RAML 1.0
+
+title: IPMX Device Control
+baseUri: http://example.api.com/x-nmos/ipmx/{version}
+version: v1.0
+mediaType: application/json
+
+/senders:
+  displayName: Senders
+  get:
+    description: Sender root
+    responses:
+      200:
+        description: List available Senders. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+  /{senderId}:
+    get:
+      description: List all the API endpoints for a single sender.
+      responses:
+        200:
+          description: Returned when success.
+        404:
+          description: Returned when the requested Sender ID does not exist.
+    /media-essentials:
+      get:
+        description: Get the last media essentials which we put before.
+        responses:
+          200:
+            body:
+              type: !include schemas/media_essentials_set.json
+          404:
+            description: Returned when the media essentials don't exist.
+      put:
+        description: Put desired media essentials.
+        body:
+          type: !include schemas/media_essentials_set.json
+        responses:
+          200:
+            description: Returned when success.
+          400:
+            description: >
+              Returned when the media essentials are rejected due to schema validation failure or if the Node doesn't support the requested mode.
+          500:
+            description: >
+              Returned if IS-04 resources can't be modified due to a reason which is not related to a violation of schema.
+            body:
+              type: !include schemas/error.json
+/receivers:
+  displayName: Receivers
+  get:
+    description: List available receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+  /{receiverId}:
+    get:
+      description: List all the API endpoints for a single receiver.
+      responses:
+        200:
+          description: Returned when success.
+        404:
+          description: Returned when the requested Receiver ID does not exist.
+    /destination:
+      get:
+        description: Return Destination.
+        responses:
+          200:
+            description: Returned when success.
+            body:
+              example: !include ../examples/destination-json-get-200.json
+          404:
+            description: Returned when a destination isn't connected.
+    /edid:
+      /binary:
+        get:
+          description: Download an EDID file.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                application/octet-stream:
+                  type: file
+            404:
+              description: Returned when the EDID file is absent for this Receiver.
+      /json:
+        get:
+          description: Get EDID file content.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                type: !include schemas/edid.json
+                example: !include ../examples/edid-json-get-200.json
+            404:
+              description: Returned when the EDID file is absent for this Receiver.

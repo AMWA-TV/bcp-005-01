@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "components" : {
+    "description" : "Array of objects describing the components (flow_video.json)",
+    "type" : "array",
+    "minItems": 1,
+    "items" : {
+      "title" : "component",
+      "type" : "object",
+      "required": [
+        "name",
+        "width",
+        "height",
+        "bit_depth"
+      ],
+      "properties" : {
+        "name" : {
+          "description" : "Name of this component",
+          "type" : "string",
+          "enum" : [
+            "Y",
+            "Cb",
+            "Cr",
+            "I",
+            "Ct",
+            "Cp",
+            "A",
+            "R",
+            "G",
+            "B",
+            "DepthMap"
+          ]
+        },
+        "width" : {
+          "description" : "Width of this component in pixels",
+          "type" : "integer"
+        },
+        "height" : {
+          "description" : "Height of this component in pixels",
+          "type" : "integer"
+        },
+        "bit_depth" : {
+          "description" : "Number of bits used to describe each sample",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "frame_width": {
+    "description" : "Width of the picture in pixels (flow_video.json)",
+    "type" : "integer"
+  },
+  "frame_height" : {
+    "description" : "Height of the picture in pixels (flow_video.json)",
+    "type" : "integer"
+  },
+  "interlace_mode" : {
+    "description" : "Interlaced video mode for frames in this Flow (flow_video.json)",
+    "type" : "string",
+    "default": "progressive",
+    "enum" : [
+      "progressive",
+      "interlaced_tff",
+      "interlaced_bff",
+      "interlaced_psf"
+    ]
+  },
+  "grain_rate" : {
+    "description": "Number of Grains per second for this Flow. Must be an integer division of, or equal to the Grain rate specified by the parent Source. Grain rate matches the frame rate for video (see NMOS Content Model). Specified for periodic Flows only. (flow_core.json)",
+    "type": "object",
+    "required" : [
+      "numerator"
+    ],
+    "properties" : {
+      "numerator" : {
+        "description" : "Numerator",
+        "type" : "integer"
+       },
+      "denominator" : {
+        "description" : "Denominator",
+        "type" : "integer",
+        "default" : 1
+      }
+    }
+  },
+  "sample_rate" : {
+    "description": "Number of audio samples per second for this Flow (flow_audio.json)",
+    "type": "object",
+    "required" : [
+      "numerator"
+    ],
+    "properties" : {
+      "numerator" : {
+        "description" : "Numerator",
+        "type" : "integer"
+      },
+      "denominator" : {
+        "description" : "Denominator",
+        "type" : "integer",
+        "default" : 1
+      }
+    }
+  },
+  "media_type": {
+    "description": "Subclassification of the format using IANA assigned media types (flow_audio.json)",
+    "type": "string",
+    "anyOf": [
+      {
+        "enum": [
+          "audio/L24",
+          "audio/L20",
+          "audio/L16",
+          "audio/L8"
+        ]
+      },
+      {
+        "pattern": "^audio\\/[^\\s\\/]+$"
+      }
+    ]
+  },
+  "bit_depth" : {
+    "description" : "Bit depth of the audio samples (flow_audio.json)",
+    "type" : "integer"
+  },
+  "channels" : {
+    "description" : "Array of objects describing the audio channels (source_audio.json)",
+    "type" : "array",
+    "minItems": 1,
+    "items" : {
+      "title" : "Component",
+      "type" : "object",
+      "required" : [
+        "label"
+      ],
+      "properties" : {
+        "label" : {
+          "description" : "Label for this channel (free text)",
+          "type" : "string"
+        },
+        "symbol" : {
+          "description" : "Symbol for this channel (from VSF TR-03 Appendix A)",
+          "type" : "string",
+          "oneOf": [
+            {
+              "enum" : [
+                "L",
+                "R",
+                "C",
+                "LFE",
+                "Ls",
+                "Rs",
+                "Lss",
+                "Rss",
+                "Lrs",
+                "Rrs",
+                "Lc",
+                "Rc",
+                "Cs",
+                "HI",
+                "VIN",
+                "M1",
+                "M2",
+                "Lt",
+                "Rt",
+                "Lst",
+                "Rst",
+                "S"
+              ]
+            },
+            {
+              "pattern": "NSC(0[0-9]{2}|1[0-1]{1}[0-9]{1}|12[0-7]{1})",
+              "description": "Numbered Source Channel"
+            },
+            {
+              "pattern": "U(0[1-9]{1}|[1-5]{1}[0-9]{1}|6[0-4]{1})",
+              "description": "Undefined channel"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
