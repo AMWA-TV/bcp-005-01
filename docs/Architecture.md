@@ -1,6 +1,6 @@
 # Introduction
 
-This document presents an architecture for EDID Connection Management User Stories as described  by the NMOS Steering committee. The document was prepared as the key deliverable by the NMOS EDID Connection Management Activity phase one which ran from approximately the end of September 2020  though the second week of November 2020.
+This document presents an architecture for EDID Connection Management.  The document provides a list of User-Stories followed by static architectural elements.  These elements are used as the basis to construct UML sequence diagrams for both EDID processing and related IS-04, IS-05 discovery and connection management.  The document provides definitions and network topoligies related to the architecture. 
 
 # References
 
@@ -207,19 +207,6 @@ Table 5: Sequence Diagram Steps for Figure 10
 | 7: Get Info | The IPMX Control System performs a Get on Destinations information resource. | This information is provided in a JSON Format. |
 | 8: return | The information described in User-Story 6 is presented to the PRO-AV User. | |
 
-# EDID To Receiver Capabilities Best Practice Mappings
-
-Work in progress for mapping EDID to Receiver Caps.
-
-Future Link to Best/Recommended  Practices document
-
-https://docs.google.com/spreadsheets/d/1X6_mh3qK9pFWS1ooXpwP3p-7RMu8QrOx9dAUX0g4Y0U/
-
-Future Link to the Best Practices Document
-
-# JSON Schemas and API Additions
-
-Work in progress for JSON and RESTful API details for items described in this architecture. Link to the RAML and Schemas.
 
 # Conclusions
 
