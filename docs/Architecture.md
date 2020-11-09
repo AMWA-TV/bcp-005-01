@@ -1,6 +1,6 @@
 # Introduction
 
-This document presents an architecture for EDID Connection Management.  The document provides a list of User-Stories followed by static architectural elements.  These elements are used as the basis to construct UML sequence diagrams for both EDID processing and related IS-04, IS-05 discovery and connection management.  The document provides definitions and network topoligies related to the architecture. 
+This document presents an architecture for EDID Connection Management.  The document provides a list of User-Stories followed by static architectural elements.  These elements are used as the basis to construct UML sequence diagrams for both EDID processing and related IS-04 discovery and IS-05  connection management.  The document provides definitions and network topologies related to the architecture. 
 
 # References
 
