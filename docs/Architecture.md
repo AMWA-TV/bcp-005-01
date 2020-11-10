@@ -49,11 +49,11 @@ Set of multiple Media Essentials which are all acceptable for all Receivers impl
 Each of the user stories applies to one or more network topology which describes the NMOS ecosystem.  The following network topologies are identified as relating to particular User-Stories.
 
 * Peer-to-peer: Two media nodes are directly attached with no network. There are no other devices present.
-  * Relates to User-Stories: 1, 2, 3, 7
+  * Relates to User-Stories: 1, 2, 3
 * Few-to-few: Very limited number of nodes on a network with no dedicated NMOS Registration and Discovery Server (RDS). Device discovery is handled internally by each device on the network.
-  * Relates to User-Stories: 3, 4, 5, 6, 7
+  * Relates to User-Stories: 3, 4, 5, 6
 * Many-to-Many: Scalable amount of media nodes within a large network. There are dedicated servers and/or applications for each component such as an IPMX NMOS Controller and NMOS RDS.
-  * Relates to User Stories: 4, 5, 6, 7
+  * Relates to User Stories: 4, 5, 6
 
 # Context Level Diagram<sup>[2](#footnote2)</sup>
 
