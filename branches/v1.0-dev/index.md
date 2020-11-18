@@ -5,7 +5,7 @@
 
 ## Documentation for branch v1.0-dev
 
-- [Overview](docs/1.0._Overview.md)
+- [Architecture](docs/1.0._Architecture.md)
 
 ## APIs for branch v1.0-dev
 

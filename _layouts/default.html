@@ -20,7 +20,7 @@
 
         <div class="header" id="myHeader">
 
-        {% unless site.amwa_id contains "IS-" or site.amwa_id contains "MS-" %}
+        {% unless site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
             <a href="{{ site.baseurl }}/">HOME</a>
         {% endunless %}
 
@@ -67,13 +67,17 @@
 
           {% else %}
 
-            {% if site.amwa_id contains "IS-" %}
-              <a href="{{ site.baseurl }}/{{ site.default_tree }}/docs">DOCS</a>
+            {% if site.amwa_id contains "IS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
               <span class="dropdown">SPEC...
                 <div class="dropdown-content">
-                  <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs">APIS</a></p>
-                  <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs/schemas">SCHEMAS</a></p>
-                  <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/examples">EXAMPLES</a></p>
+                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/docs">DOCS</a></p>
+                  {% if site.amwa_id contains "IS-" %}
+                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs">APIS</a></p>
+                  {% endif %}
+                  {% if site.amwa_id contains "IS-" or site.amwa_id contains "BCP-004-" %}
+                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs/schemas">SCHEMAS</a></p>
+                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/examples">EXAMPLES</a></p>
+                  {% endif %}
                 </div>
               </span>
               <span class="dropdown">VERSIONS...
@@ -82,23 +86,13 @@
                   <p><a href="{{ site.baseurl }}/branches">DEVELOPMENT BRANCHES</a></p>
                 </div>
               </span>
-
-            {% elsif site.amwa_id contains "BCP-003-" %}
-              <a href="{{ site.baseurl }}/{{ site.default_tree }}/docs">DOCS</a>
-              <span class="dropdown">VERSIONS...
-                <div class="dropdown-content">
-                  <p><a href="{{ site.baseurl }}/tags">RELEASES (TAGS)</a></p>
-                  <p><a href="{{ site.baseurl }}/branches">BRANCHES</a></p>
-                </div>
-              </span>
+            {% endif %}
 
             {% else %}
               UNKNOWN ID
-            {% endif %}
-
           {% endcase %}
 
-          <a href="{{ site.github.repository_url }}">GITHUB</a>
+          <a href="{{ site.github.repository_url }}">REPO</a>
           <span class="dropdown">INFO...
             <div class="dropdown-content">
                 <p><a href="https://amwa-tv.github.io/nmos/branches/master/FAQ.html">FAQ</a></p>
@@ -113,7 +107,7 @@
               <p><a href="https://amwa-tv.github.io/nmos/Dashboard.html">CI Dashboard</a></p>
             </div>
           </span>
-          <span class="dropdown">IS-XX...
+          <span class="dropdown">IS-...
               <div class="dropdown-content">
                   <p><a href="https://amwa-tv.github.io/nmos-discovery-registration">IS-04 Discovery & Registration</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-device-connection-management">IS-05 Connection Management</a></p>
@@ -124,15 +118,20 @@
                   <p><a href="https://amwa-tv.github.io/nmos-authorization">IS-10 Authorization</a></p>
               </div>
               </span>
-              <span class="dropdown">MORE...
+              <span class="dropdown">BCP-...
               <div class="dropdown-content">
-                  <p><a href="https://amwa-tv.github.io/nmos">General NMOS Documentation</a></p>
-                  <p><a href="https://amwa-tv.github.io/nmos-id-timing-model">MS-04 Identity & Timing Model</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-grouping">BCP-002 Grouping</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-api-security">BCP-003 API Security</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-secure-communication">BCP-003-01 Secure Communications</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-authorization-practice">BCP-003-02 Authorization Practice</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-certificate-provisioning">BCP-003-03 Certificate Provisioning</a></p>
+                  <p><a href="https://amwa-tv.github.io/nmos-receiver-capabilities">BCP-004-01 Receiver Capabilities</a></p>
+              </div>
+              </span>
+              <span class="dropdown">MORE...
+              <div class="dropdown-content">
+                  <p><a href="https://amwa-tv.github.io/nmos">General NMOS Documentation</a></p>
+                  <p><a href="https://amwa-tv.github.io/nmos-id-timing-model">MS-04 Identity & Timing Model</a></p>
                   <p><a href="https://amwa-tv.github.io/nmos-parameter-registers">Parameter Registers</a></p>
               </div>
               </span>
@@ -143,7 +142,7 @@
               </div>
           </span>
 
-        {% if site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" %}
+        {% if site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
           <div class="breadcrumbs">
               {% assign dirlist = page.url | split: "/" %}
               {% assign nlinks = dirlist.size | minus: 2 | at_most: 4 %}
@@ -155,7 +154,7 @@
               {% endfor %}
               {% if dirlist.size > 2 %}
                  {% if dirlist[1] == "branches" %}
-                     <span class="version-warning"><a href="{{ site.baseurl }}/tags">Viewing development version(s). Click here for published version(s)</a></span>
+                     <span class="version-warning"><a href="{{ site.baseurl }}/tags">Viewing development version. Click here for list of published versions.</a></span>
                  {% elsif dirlist[1] == "tags" %}
                      {% assign this_tree = dirlist[2] | prepend: "tags/" %}
                      {% if this_tree != site.default_tree  %}
