@@ -1,8 +1,8 @@
-# AMWA NMOS EDID Connection Management Specification
+# AMWA NMOS EDID Connection Management Specification [Work in Progress]
 
 [![Build Status](https://travis-ci.com/AMWA-TV/nmos-edid-connection-management.svg?branch=v1.0-dev)](https://travis-ci.com/AMWA-TV/nmos-edid-connection-management)
 
-This repository contains details of this AMWA Specification...
+This repository contains details of the AMWA EDID Connection Managerment specification.
 
 ## Getting started
 
@@ -16,7 +16,7 @@ Readers should then read the [documentation](docs/), [APIs](APIs/) (RAML and JSO
 
 ## Contents
 
-- README.md -- This file
+- [README.md](README.md) -- This file.
 - [docs/](docs/) -- Documentation targeting those implementing APIs and clients.
 - [APIs/](APIs/) -- Normative specifications of APIs
 - [examples/](examples/) -- Example JSON requests and responses for APIs
