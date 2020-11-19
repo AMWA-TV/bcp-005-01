@@ -1,3 +1,8 @@
-This directory is for Markdown documentation.
+# NMOS EDID Connection Management Documentation
 
-Please start filenames with "#.# " for correct documentation build.
+This repository contains documention for AMWA EDID Connection Management.
+
+## Contents
+
+- [README.md](README.md) -- This file
+- [1.0 Architecture.md](1.0.Architecture.md) - Architecture for EDID Connection Management
