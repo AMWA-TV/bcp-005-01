@@ -18,7 +18,8 @@
 
 ### Why does it matter?
 
-- PRO AV Users of NMOS require support for user stories tailored to the PRO AV world/
+- PRO AV Users of NMOS require support for user stories tailored to the PRO AV world
+- To transition to IP and leverage NMOS, existing EDID workflows need to be adapted to match the new technologies
 
 ### How does it work?
 
