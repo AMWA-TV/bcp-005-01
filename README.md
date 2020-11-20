@@ -12,7 +12,7 @@ Readers are advised to be familiar with:
 - The AMWA [IS-04 Discovery and Registration Specification](https://amwa-tv.github.io/nmos-discovery-registration)
 - The AMWA [IS-05 Device Connection Management Specification](https://amwa-tv.github.io/nmos-device-connection-management)
 
-Readers should then read the [EDID Connection Management Architecture](docs/1.0.%20Architecture.md).
+Readers should then read the [NMOS EDID Connection Management Architecture](docs/1.0.%20Architecture.md).
 
 > HTML rendered versions of all NMOS Specifications are available on the [NMOS GitHub pages](https://amwa-tv.github.io/nmos)
 
