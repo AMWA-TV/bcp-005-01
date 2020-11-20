@@ -1,6 +1,6 @@
 # NMOS EDID Connection Management Documentation
 
-This repository contains documention for AMWA EDID Connection Management.
+This repository contains documention for AMWA NMOS EDID Connection Management.
 
 ## Contents
 
