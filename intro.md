@@ -1,6 +1,6 @@
 ### What does it do?
 
-- Provides an architecture that enables PRO AV User Stories in an NMOS environment
+- Provides an architecture that enables PRO AV User Stories, previously handled by mediums like HDMI or DisplayPort, in an NMOS environment.
 
 #### Core User Stories
 
