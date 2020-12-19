@@ -1,6 +1,7 @@
 # AMWA NMOS EDID Connection Management Specification
 
-[![Build Status](https://travis-ci.com/AMWA-TV/nmos-edid-connection-management.svg?branch=v1.0-dev)](https://travis-ci.com/AMWA-TV/nmos-edid-connection-management)
+[![Lint Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ALint)
+[![Render Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ARender)
 
 This repository contains details of AMWA NMOS EDID Connection Management specification.
 
