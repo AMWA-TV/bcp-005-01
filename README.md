@@ -9,9 +9,9 @@ This repository contains details of AMWA NMOS EDID Connection Management specifi
 
 Readers are advised to be familiar with:
 
-- The [overview of Networked Media Open Specifications](https://amwa-tv.github.io/nmos)
-- The AMWA [IS-04 Discovery and Registration Specification](https://amwa-tv.github.io/nmos-discovery-registration)
-- The AMWA [IS-05 Device Connection Management Specification](https://amwa-tv.github.io/nmos-device-connection-management)
+- The [overview of Networked Media Open Specifications](https://specs.amwa.tv/nmos)
+- The AMWA [IS-04 Discovery and Registration Specification](https://specs.amwa.tv/is-04)
+- The AMWA [IS-05 Device Connection Management Specification](https://specs.amwa.tv/is-05)
 
 Readers should then read the [NMOS EDID Connection Management Architecture](docs/1.0.%20Architecture.md).
 
