@@ -1,10 +1,3 @@
-# AMWA NMOS EDID Connection Management Specification
-
-[![Lint Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ALint)
-[![Render Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ARender)
-
-[//]: # "INTRO-START"
-
 ### What does it do?
 
 - Provides an architecture that enables PRO AV User Stories, previously handled by mediums like HDMI or DisplayPort, in an NMOS environment.
@@ -32,9 +25,3 @@
 
 - Builds on existing NMOS Specifications including extended Receiver Capabilities
 - Adds a new IPMX Device Controller and associated API
-
-[//]: # "INTRO-END"
-
-## Getting started
-
-There is more information about the NMOS Specifications and their GitHub repos at <https://specs.amwa.tv/nmos>.
