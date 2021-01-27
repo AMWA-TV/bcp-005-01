@@ -3,7 +3,7 @@ theme: jekyll-theme-primer
 spec_server: specs.amwa.tv
 
 # AMWA ID
-amwa_id: EDID-CM
+amwa_id: IS-EDID-CM
 
 # Base name for site (typically lower case version of AMWA ID, or the repo name)
 baseurl: /nmos-edid-connection-management
