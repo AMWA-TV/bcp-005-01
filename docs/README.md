@@ -6,3 +6,4 @@ This repository contains documention for AMWA NMOS EDID Connection Management.
 
 - [README.md](README.md) -- This file.
 - [1.0 Architecture.md](1.0.%20Architecture.md) -- Architecture for NMOS EDID Connection Management.
+- [AMWA BCP-XXX-YY.md](1.0.%20AMWA BCP-XXX-YY.md) -- Mapping of EDID Information to NMOS Resources.
