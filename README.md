@@ -3,7 +3,7 @@
 [![Lint Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ALint)
 [![Render Status](https://github.com/AMWA-TV/nmos-edid-connection-management/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-edid-connection-management/actions?query=workflow%3ARender)
 
-[//]: # "INTRO-START"
+<!-- INTRO-START -->
 
 ### What does it do?
 
@@ -33,7 +33,7 @@
 - Builds on existing NMOS Specifications including extended Receiver Capabilities
 - Adds a new IPMX Device Controller and associated API
 
-[//]: # "INTRO-END"
+<!-- INTRO-END -->
 
 ## Getting started
 
