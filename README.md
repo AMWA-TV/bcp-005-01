@@ -5,11 +5,11 @@
 
 <!-- INTRO-START -->
 
-### What does it do?
+## What does it do?
 
 - Provides an architecture that enables PRO AV User Stories, previously handled by mediums like HDMI or DisplayPort, in an NMOS environment.
 
-#### Core User Stories
+### Core User Stories
 
 1. As a user with a computer that is connected to an HDMI-IPMX gateway (sender) that is connected through a network to an IPMX-HDMI gateway (receiver) plugged into an HDMI monitor with EDID, I would like to be able to plug my computer in and have the best video resolution displayed.
 
@@ -23,12 +23,12 @@
 
 6. As a Pro AV installer, I have developed some in house EDID software that reads the more detailed data from the monitor, such serial numbers, manufacture date and colour management information. When I make video walls for customers, I use IPMX AV over IP hardware to deliver content. I would like to be able to retrieve the EDID binary representation from my monitors into my home-built software, so that I can use that information to adjust the monitors and manage my system.
 
-### Why does it matter?
+## Why does it matter?
 
 - PRO AV Users of NMOS require support for user stories tailored to the PRO AV world
 - To transition to IP and leverage NMOS, existing EDID workflows need to be adapted to match the new technologies
 
-### How does it work?
+## How does it work?
 
 - Builds on existing NMOS Specifications including extended Receiver Capabilities
 - Adds a new IPMX Device Controller and associated API
