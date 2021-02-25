@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "manufacturer",
+    "manufacture_week",
+    "manufacture_year",
+    "version",
+    "screen_size",
+    "gamma",
+    "display_type",
+    "established_timings"
+  ],
+  "properties": {
+    "manufacturer": {
+      "type": "string"
+    },
+    "manufacture_week": {
+      "type": "integer"
+    },
+    "manufacture_year": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string",
+      "enum": [
+        "1.3",
+        "1.4"
+      ]
+    },
+    "screen_size": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "description": "Horizontal screen size, in centimetres",
+          "type": "integer"
+        },
+        "height": {
+          "description": "Vertical screen size, in centimetres",
+          "type": "integer"
+        }
+      }
+    },
+    "gamma": {
+      "type": "number"
+    },
+    "display_type": {
+      "description": "Digital display type in terms of supported subsampling modes",
+      "type": "string",
+      "enum": [
+        "RGB 4:4:4",
+        "RGB 4:4:4 + YUV 4:4:4",
+        "RGB 4:4:4 + YUV 4:2:2",
+        "RGB 4:4:4 + YUV 4:4:4 + YUV 4:2:2"
+      ]
+    },
+    "established_timings": {
+      "type": "array",
+      "items": {
+        "$ref": "edid_timing.json"
+      }
+    },
+    "standard_timings": {
+      "type": "array",
+      "items": {
+        "$ref": "edid_timing.json"
+      }
+    },
+    "detailed_timings": {
+      "type": "array",
+      "items": {
+        "$ref": "edid_timing.json"
+      }
+    },
+    "cea_ext_timings": {
+      "type": "array",
+      "items": {
+        "$ref": "edid_timing.json"
+      }
+    }
+  }
+}
