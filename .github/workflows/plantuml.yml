@@ -1,0 +1,15 @@
+name: Render PlantUML diagrams
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Render PlantUML diagrams
+        uses: grassedge/generate-plantuml-action@v1.5
+        with:
+          path: docs/images/svg
+          message: "Render PlantUML files"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
