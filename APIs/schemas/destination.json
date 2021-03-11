@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "manufacturer_name",
+    "product_code"
+  ],
+  "properties": {
+    "id": {
+      "description": "Globally unique identifier for Destination",
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "manufacturer_name": {
+      "type": "string"
+    },
+    "product_code": {
+      "type": "string"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "screen_size": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "description": "Horizontal screen size, in centimetres",
+          "type": "integer"
+        },
+        "height": {
+          "description": "Vertical screen size, in centimetres",
+          "type": "integer"
+        }
+      }
+    },
+    "gamma": {
+      "type": "number"
+    }
+  }
+}

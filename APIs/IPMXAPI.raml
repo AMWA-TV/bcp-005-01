@@ -1,7 +1,7 @@
 #%RAML 1.0
 
-title: IPMX Device Control
-baseUri: http://example.api.com/x-nmos/ipmx/{version}
+title: EDID Mapping
+baseUri: http://example.api.com/x-nmos/edid/{version}
 version: v1.0
 mediaType: application/json
 
@@ -12,61 +12,157 @@ mediaType: application/json
     responses:
       200:
         description: List available Senders. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+        body:
+          example: !include ../examples/resourcelist-get-200.json
+          type: !include schemas/sender-receiver-base.json
   /{senderId}:
     get:
       description: List all the API endpoints for a single sender.
       responses:
         200:
           description: Returned when success.
+          body:
+            example: !include ../examples/sender-get-200.json
+            type: !include schemas/edidmappingapi-sender.json
         404:
           description: Returned when the requested Sender ID does not exist.
-    /media-essentials:
+    /media-essentials-sets:
       get:
-        description: Get the last media essentials which we put before.
         responses:
           200:
             body:
-              type: !include schemas/media_essentials_set.json
-          404:
-            description: Returned when the media essentials don't exist.
-      put:
-        description: Put desired media essentials.
-        body:
-          type: !include schemas/media_essentials_set.json
-        responses:
-          200:
-            description: Returned when success.
-          400:
-            description: >
-              Returned when the media essentials are rejected due to schema validation failure or if the Node doesn't support the requested mode.
-          500:
-            description: >
-              Returned if IS-04 resources can't be modified due to a reason which is not related to a violation of schema.
-            body:
-              type: !include schemas/error.json
+              example: !include ../examples/media-essentials-sets-destination-base.json
+              type: !include schemas/activeall-get-200.json
+      /all:
+        get:
+          description: Show the last media essentials put before.
+          responses:
+            200:
+              body:
+                example: !include ../examples/media-essentials-sets-get-200.json
+                type: !include schemas/media_essentials_sets.json
+        put:
+          description: Put desired media essentials.
+          body:
+            example: !include ../examples/media-essentials-sets-get-200.json
+            type: !include schemas/media_essentials_sets.json
+          responses:
+            200:
+              description: Returned when success.
+            400:
+              description: >
+                Returned when the media essentials are rejected due to schema validation failure or if the Device doesn't support the requested mode.
+            423:
+              description: Returned when the media essentials can't be applied temporarily (e.g. due to an existing connection).
+            500:
+              description: >
+                Returned if the media essentials can't be applied due to a reason which is not related to a violation of schema.
+              body:
+                type: !include schemas/error.json
+        delete:
+          description: Delete the last media essentials put before.
+          responses:
+            200:
+              description: Returned when success.
+            500:
+              description: >
+                Returned if the media essentials can't delete due to a reason which is not related to a violation of schema.
+              body:
+                type: !include schemas/error.json
+      /active:
+        get:
+          description: Show the last media essentials put before.
+          responses:
+            200:
+              body:
+                example: !include ../examples/media-essentials-set-get-200.json
+                type: !include schemas/media_essentials_set.json
+        put:
+          description: Put desired media essentials.
+          body:
+            example: !include ../examples/media-essentials-set-get-200.json
+            type: !include schemas/media_essentials_set.json
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                example: !include ../examples/media-essentials-set-get-200.json
+                type: !include schemas/media_essentials_set.json
+            400:
+              description: >
+                Returned when the media essentials are rejected due to schema validation failure or if the Device doesn't support the requested mode.
+            423:
+              description: Returned when the media essentials can't be applied temporarily (e.g. due to an existing connection).
+            500:
+              description: >
+                Returned if the media essentials can't be applied due to a reason which is not related to a violation of schema.
+              body:
+                type: !include schemas/error.json
+        delete:
+          description: Delete the last media essentials put before.
+          responses:
+            200:
+              description: Returned when success.
+            500:
+              description: >
+                Returned if the media essentials can't delete due to a reason which is not related to a violation of schema.
+              body:
+                type: !include schemas/error.json
 /receivers:
   displayName: Receivers
   get:
     description: List available receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+    body:
+      example: !include ../examples/resourcelist-get-200.json
+      type: !include schemas/sender-receiver-base.json
   /{receiverId}:
     get:
       description: List all the API endpoints for a single receiver.
       responses:
         200:
           description: Returned when success.
+          body:
+            example: !include ../examples/receiver-resource-get-200.json
+            type: !include schemas/edidmappingapi-receiver.json
         404:
           description: Returned when the requested Receiver ID does not exist.
-    /destination:
+    /destinations:
       get:
-        description: Return Destination.
         responses:
           200:
-            description: Returned when success.
             body:
-              example: !include ../examples/destination-json-get-200.json
-          404:
-            description: Returned when a destination isn't connected.
+              example: !include ../examples/media-essentials-sets-destination-base.json
+              type: !include schemas/activeall-get-200.json
+      /all:
+        get:
+          description: Return Destinations.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                example: !include ../examples/destinations-get-200.json
+                type: !include schemas/destinations.json
+      /active:
+        get:
+          description: Return active Destination ID.
+          responses:
+            200:
+              body:
+                example: !include ../examples/activedestination-get-200.json
+                type: !include schemas/active_destination.json
+        patch:
+          description: Select Destinations
+          200:
+            body:
+              example: !include ../examples/activedestination-get-200.json
+              type: !include schemas/active_destination.json
     /edid:
+      get:
+        responses:
+          200:
+            body:
+              example: !include ../examples/edid-base.json
+              type: !include schemas/edid-get-200.json
       /binary:
         get:
           description: Download an EDID file.
@@ -77,7 +173,7 @@ mediaType: application/json
                 application/octet-stream:
                   type: file
             404:
-              description: Returned when the EDID file is absent for this Receiver.
+              description: Returned when the EDID file doesn't exist.
       /json:
         get:
           description: Get EDID file content.
@@ -88,4 +184,4 @@ mediaType: application/json
                 type: !include schemas/edid.json
                 example: !include ../examples/edid-json-get-200.json
             404:
-              description: Returned when the EDID file is absent for this Receiver.
+              description: Returned when the EDID file doesn't exist.

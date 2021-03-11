@@ -1,0 +1,77 @@
+[
+  {
+    "width": 720,
+    "height": 400,
+    "frame_rate": 70
+  },
+  {
+    "width": 640,
+    "height": 480,
+    "frame_rate": 60
+  },
+  {
+    "width": 640,
+    "height": 480,
+    "frame_rate": 67
+  },
+  {
+    "width": 640,
+    "height": 480,
+    "frame_rate": 72
+  },
+  {
+    "width": 640,
+    "height": 480,
+    "frame_rate": 75
+  },
+  {
+    "width": 800,
+    "height": 600,
+    "frame_rate": 56
+  },
+  {
+    "width": 800,
+    "height": 600,
+    "frame_rate": 60
+  },
+  {
+    "width": 800,
+    "height": 600,
+    "frame_rate": 72
+  },
+  {
+    "width": 800,
+    "height": 600,
+    "frame_rate": 75
+  },
+  {
+    "width": 832,
+    "height": 624,
+    "frame_rate": 75
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "frame_rate": 60
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "frame_rate": 70
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "frame_rate": 75
+  },
+  {
+    "width": 1280,
+    "height": 1024,
+    "frame_rate": 75
+  },
+  {
+    "width": 1152,
+    "height": 870,
+    "frame_rate": 75
+  }
+]
