@@ -136,7 +136,7 @@
 			"frame_rate": 60
 		}
 	],
-	"cea_ext_timings": [
+	"cta_861_timings": [
 		{
 			"width": 1920,
 			"height": 1080,

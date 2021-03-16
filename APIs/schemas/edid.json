@@ -76,7 +76,7 @@
         "$ref": "edid_timing.json"
       }
     },
-    "cea_ext_timings": {
+    "cta_861_timings": {
       "type": "array",
       "items": {
         "$ref": "edid_timing.json"

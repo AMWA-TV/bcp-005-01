@@ -3,11 +3,11 @@
 
 LAYOUT_LEFT_RIGHT()
 
-Person(person, "Pro AV Staff", "Responsible for setting up HDMI presentations")
+Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
 
 System_Ext(ics, "IPMX Control System", "IPMX Control System")
 
-System_Boundary(proav, "IPMX Pro AV System") {
+System_Boundary(proav, "IPMX ProAV System") {
 
     Container(dec_1, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 1")
     Container(dec_2, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 2")

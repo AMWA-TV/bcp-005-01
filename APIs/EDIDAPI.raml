@@ -1,0 +1,127 @@
+#%RAML 1.0
+
+title: EDID Processing
+baseUri: http://example.api.com/x-nmos/edid/{version}
+version: v1.0
+mediaType: application/json
+
+/senders:
+  displayName: Senders
+  get:
+    description: Sender root
+    responses:
+      200:
+        description: List available Senders. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+        body:
+          example: !include ../examples/resourcelist-get-200.json
+          type: !include schemas/resource-list.json
+  /{senderId}:
+    get:
+      description: List all the API endpoints for a single sender.
+      responses:
+        200:
+          description: Returned when success.
+          body:
+            example: !include ../examples/sender-get-200.json
+            type: !include schemas/edidapi-sender.json
+        404:
+          description: Returned when the requested Sender ID does not exist.
+    /media-profiles:
+      get:
+        description: Show the last media profile array put before.
+        responses:
+          200:
+            body:
+              example: !include ../examples/media-profiles-get-200.json
+              type: !include schemas/media_profiles.json
+      put:
+        description: Put desired media profiles.
+        body:
+          example: !include ../examples/media-profiles-sets-get-200.json
+          type: !include schemas/media_profiles.json
+        responses:
+          200:
+            description: Returned when success.
+          400:
+            description: >
+              Returned when the media profiles are rejected due to schema validation failure or if the Device doesn't support the requested mode.
+          423:
+            description: Returned when the media profiles can't be applied temporarily (e.g. due to an existing connection).
+          500:
+            description: >
+              Returned if the media profiles can't be applied due to a reason which is not related to a violation of schema.
+            body:
+              type: !include schemas/error.json
+      delete:
+        description: Delete the last media profile array put before.
+        responses:
+          200:
+            description: Returned when success.
+          500:
+            description: >
+              Returned if the media profiles can't delete due to a reason which is not related to a violation of schema.
+            body:
+              type: !include schemas/error.json
+/receivers:
+  displayName: Receivers
+  get:
+    description: List available receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+    body:
+      example: !include ../examples/resourcelist-get-200.json
+      type: !include schemas/resource-list.json
+  /{receiverId}:
+    get:
+      description: List all the API endpoints for a single receiver.
+      responses:
+        200:
+          description: Returned when success.
+          body:
+            example: !include ../examples/receiver-resource-get-200.json
+            type: !include schemas/edidapi-receiver.json
+        404:
+          description: Returned when the requested Receiver ID does not exist.
+    /sinks:
+      get:
+        responses:
+          200:
+            body:
+              example: !include ../examples/resourcelist-get-200.json
+              type: !include schemas/resource-list.json
+      /{sinkId}:
+        get:
+          description: Return Sink.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                example: !include ../examples/sink-get-200.json
+                type: !include schemas/sink.json
+    /edid:
+      get:
+        responses:
+          200:
+            body:
+              example: !include ../examples/edid-get-200.json
+              type: !include schemas/edidapi-edid.json
+      /binary:
+        get:
+          description: Download an EDID file.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                application/octet-stream:
+                  type: file
+            404:
+              description: Returned when the EDID file doesn't exist.
+      /json:
+        get:
+          description: Get EDID file content.
+          responses:
+            200:
+              description: Returned when success.
+              body:
+                type: !include schemas/edid.json
+                example: !include ../examples/edid-json-get-200.json
+            404:
+              description: Returned when the EDID file doesn't exist.

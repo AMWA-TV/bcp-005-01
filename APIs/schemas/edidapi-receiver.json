@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "description": "Describes the EDID Mapping API /receivers/{receiverId} base resource",
+  "title": "EDID Mapping API /receivers/{receiverId} base resource",
+  "items": {
+    "type": "string",
+    "enum": [
+      "sinks/",
+      "edid/"
+    ]
+  },
+  "minItems": 2,
+  "maxItems": 2,
+  "uniqueItems": true
+}
