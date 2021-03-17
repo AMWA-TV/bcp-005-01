@@ -2,16 +2,26 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
+    "version",
     "manufacturer",
     "manufacture_week",
     "manufacture_year",
-    "version",
     "screen_size",
     "gamma",
     "display_type",
     "established_timings"
   ],
   "properties": {
+    "version": {
+      "description": "String formatted TAI timestamp (<seconds>:<nanoseconds>) indicating precisely when an attribute of the resource last changed",
+      "type": "string",
+      "pattern": "^[0-9]+:[0-9]+$"
+    },
+    "edid_binary_href": {
+      "description": "HTTP(S) accessible URL to a binary EDID file.",
+      "type": ["string", "null"],
+      "format": "uri"
+    },
     "manufacturer": {
       "type": "string"
     },
@@ -20,13 +30,6 @@
     },
     "manufacture_year": {
       "type": "integer"
-    },
-    "version": {
-      "type": "string",
-      "enum": [
-        "1.3",
-        "1.4"
-      ]
     },
     "screen_size": {
       "type": "object",

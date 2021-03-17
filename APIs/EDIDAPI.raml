@@ -37,7 +37,7 @@ mediaType: application/json
       put:
         description: Put desired media profiles.
         body:
-          example: !include ../examples/media-profiles-sets-get-200.json
+          example: !include ../examples/media-profiles-get-200.json
           type: !include schemas/media_profiles.json
         responses:
           200:
@@ -66,9 +66,11 @@ mediaType: application/json
   displayName: Receivers
   get:
     description: List available receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
-    body:
-      example: !include ../examples/resourcelist-get-200.json
-      type: !include schemas/resource-list.json
+    responses:
+        200:
+          body:
+            example: !include ../examples/resourcelist-get-200.json
+            type: !include schemas/resource-list.json
   /{receiverId}:
     get:
       description: List all the API endpoints for a single receiver.
@@ -76,7 +78,7 @@ mediaType: application/json
         200:
           description: Returned when success.
           body:
-            example: !include ../examples/receiver-resource-get-200.json
+            example: !include ../examples/receiver-get-200.json
             type: !include schemas/edidapi-receiver.json
         404:
           description: Returned when the requested Receiver ID does not exist.
@@ -84,44 +86,36 @@ mediaType: application/json
       get:
         responses:
           200:
+            description: List of Sinks connected to the Receiver.
             body:
               example: !include ../examples/resourcelist-get-200.json
               type: !include schemas/resource-list.json
-      /{sinkId}:
-        get:
-          description: Return Sink.
-          responses:
-            200:
-              description: Returned when success.
-              body:
-                example: !include ../examples/sink-get-200.json
-                type: !include schemas/sink.json
     /edid:
       get:
+        description: Get EDID file content.
         responses:
           200:
+            description: Returned when success.
             body:
-              example: !include ../examples/edid-get-200.json
-              type: !include schemas/edidapi-edid.json
-      /binary:
-        get:
-          description: Download an EDID file.
-          responses:
-            200:
-              description: Returned when success.
-              body:
-                application/octet-stream:
-                  type: file
-            404:
-              description: Returned when the EDID file doesn't exist.
-      /json:
-        get:
-          description: Get EDID file content.
-          responses:
-            200:
-              description: Returned when success.
-              body:
-                type: !include schemas/edid.json
-                example: !include ../examples/edid-json-get-200.json
-            404:
-              description: Returned when the EDID file doesn't exist.
+              type: !include schemas/edid.json
+              example: !include ../examples/edid-json-get-200.json
+          404:
+            description: Returned when the EDID file doesn't exist.
+/sinks:
+  displayName: Sinks
+  get:
+    responses:
+      200:
+        description: List of Sinks connected to the Receiver.
+        body:
+          example: !include ../examples/resourcelist-get-200.json
+          type: !include schemas/resource-list.json
+  /{sinkId}:
+    get:
+      description: Return Sink.
+      responses:
+        200:
+          description: Returned when success.
+          body:
+            example: !include ../examples/sink-get-200.json
+            type: !include schemas/sink.json

@@ -8,17 +8,11 @@
     {
       "type": "object",
       "required": [
-        "edid",
-        "edid_binary_href"
+        "edid"
       ],
       "properties": {
         "edid": {
           "$ref": "edid.json"
-        },
-        "edid_binary_href": {
-          "description": "HTTP(S) accessible URL to a binary EDID file.",
-          "type": ["string", "null"],
-          "format": "uri"
         }
       }
     }
