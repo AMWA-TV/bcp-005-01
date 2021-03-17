@@ -6,6 +6,7 @@
     "manufacturer",
     "manufacture_week",
     "manufacture_year",
+    "edid_binary_href",
     "screen_size",
     "gamma",
     "display_type",
