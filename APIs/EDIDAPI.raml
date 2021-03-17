@@ -90,17 +90,6 @@ mediaType: application/json
             body:
               example: !include ../examples/resourcelist-get-200.json
               type: !include schemas/resource-list.json
-    /edid:
-      get:
-        description: Get EDID file content.
-        responses:
-          200:
-            description: Returned when success.
-            body:
-              type: !include schemas/edid.json
-              example: !include ../examples/edid-json-get-200.json
-          404:
-            description: Returned when the EDID file doesn't exist.
 /sinks:
   displayName: Sinks
   get:
