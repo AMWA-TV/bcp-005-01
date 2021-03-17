@@ -53,13 +53,21 @@
     },
     "display_type": {
       "description": "Digital display type in terms of supported subsampling modes",
-      "type": "string",
-      "enum": [
-        "RGB 4:4:4",
-        "RGB 4:4:4 + YUV 4:4:4",
-        "RGB 4:4:4 + YUV 4:2:2",
-        "RGB 4:4:4 + YUV 4:4:4 + YUV 4:2:2"
-      ]
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "contains": {
+        "const": "RGB444"
+      },
+      "items": {
+        "type": "string",
+        "enum": [
+          "RGB444",
+          "YUV444",
+          "YUV422"
+        ]
+      }
     },
     "established_timings": {
       "type": "array",

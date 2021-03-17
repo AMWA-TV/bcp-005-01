@@ -14,7 +14,7 @@
       "height": 30
     },
     "gamma": 2.2,
-    "display_type": "RGB 4:4:4 + YUV 4:4:4",
+    "display_type": [ "RGB444", "YUV444" ],
     "established_timings": [
       {
         "width": 720,
