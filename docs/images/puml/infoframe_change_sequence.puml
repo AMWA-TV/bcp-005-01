@@ -1,0 +1,11 @@
+@startuml
+participant "HDMI Source User"
+participant "HDMI Source"
+participant "IPMX Device Control API: IPMX Device Controller"
+participant "IS-04 Device: IP to HDMI Gateway"
+
+"HDMI Source User" -> "HDMI Source": 1. Change Video Format
+"HDMI Source" -> "HDMI Source": 2. Change InfoFrames
+"IPMX Device Control API: IPMX Device Controller" -> "IPMX Device Control API: IPMX Device Controller": 3. Detect the InfoFrame change
+"IS-04 Device: IP to HDMI Gateway" <- "IPMX Device Control API: IPMX Device Controller": 4. Update Sources, Flows and Senders
+@enduml

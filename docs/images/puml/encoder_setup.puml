@@ -1,0 +1,14 @@
+@startuml
+skinparam BoxPadding 10
+
+participant "HDMI Source"
+participant "IPMX Device Control API: IPMX Device Controller"
+participant "IS-04 Device: IP to HDMI Gateway"
+participant "IPMX Control System"
+
+"IPMX Control System" -> "IPMX Device Control API: IPMX Device Controller": 1. Put Media Essentials Set
+"IPMX Control System" <- "IPMX Device Control API: IPMX Device Controller": return
+"HDMI Source" <- "IPMX Device Control API: IPMX Device Controller": 2. Present EDID
+"IS-04 Device: IP to HDMI Gateway" <- "IPMX Device Control API: IPMX Device Controller": 3. Update Sources, Flows and Senders
+"IS-04 Device: IP to HDMI Gateway" -> "IPMX Device Control API: IPMX Device Controller": return
+@enduml

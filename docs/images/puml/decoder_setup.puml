@@ -1,0 +1,12 @@
+@startuml
+participant "HDMI Destination"
+participant "IPMX Device Control API: IPMX Device Controller"
+participant "IS-04 Device: IP to HDMI Gateway"
+
+"HDMI Destination" <- "IPMX Device Control API: IPMX Device Controller": 1. Read EDID
+"HDMI Destination" -> "IPMX Device Control API: IPMX Device Controller": return
+"IPMX Device Control API: IPMX Device Controller" -> "IPMX Device Control API: IPMX Device Controller": 2. Parse EDID
+"IPMX Device Control API: IPMX Device Controller" -> "IPMX Device Control API: IPMX Device Controller": 3. Update IPMX Device Control API Destination
+"IS-04 Device: IP to HDMI Gateway" <- "IPMX Device Control API: IPMX Device Controller": 4. Update Receivers
+"IS-04 Device: IP to HDMI Gateway" -> "IPMX Device Control API: IPMX Device Controller": return
+@enduml

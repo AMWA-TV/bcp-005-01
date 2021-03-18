@@ -1,0 +1,27 @@
+@startuml
+skinparam BoxPadding 10
+
+participant "Pro AV Person"
+participant "IPMX Control System"
+box "IPMX Decoder 1"
+participant "Dec 1 IS-04"
+participant "Dec 1 IS-05"
+end box
+box "IPMX Decoder 2"
+participant "Dec 2 IS-04"
+participant "Dec 2 IS-05"
+end box
+box "IPMX Encoder"
+participant "Enc IS-04"
+participant "Enc IS-XX"
+participant "Enc IS-05"
+end box
+
+"Pro AV Person" -> "IPMX Control System": 1. Choose Sender and Receivers
+"IPMX Control System" -> "Dec 1 IS-04": 2. Get Receiver Caps 1
+"IPMX Control System" -> "Dec 2 IS-04": 3. Get Receiver Caps 2
+"IPMX Control System" -> "Enc IS-XX": 4. Put Media Essentials Set
+"IPMX Control System" -> "Enc IS-05": 5. Start Stream
+"IPMX Control System" -> "Dec 1 IS-05": 6. Receive Stream
+"IPMX Control System" -> "Dec 2 IS-05": 7. Recieve Stream
+@enduml
