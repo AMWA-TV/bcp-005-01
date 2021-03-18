@@ -108,3 +108,14 @@ mediaType: application/json
           body:
             example: !include ../examples/sink-get-200.json
             type: !include schemas/sink.json
+    /edid:
+      get:
+        description: Download an EDID file.
+        responses:
+          200:
+            description: Returned when success.
+            body:
+              application/octet-stream:
+                type: file
+          404:
+            description: Returned when the EDID file doesn't exist.
