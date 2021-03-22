@@ -45,6 +45,9 @@ mediaType: application/json
           400:
             description: >
               Returned when the media profiles are rejected due to schema validation failure or if the Device doesn't support the requested mode.
+          405:
+            description: >
+              Returned when changing media parameters is not supported for the specific Sender.
           423:
             description: Returned when the media profiles can't be applied temporarily (e.g. due to an existing connection).
           500:
