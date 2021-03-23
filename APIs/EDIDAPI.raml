@@ -11,7 +11,7 @@ mediaType: application/json
     description: Sender root
     responses:
       200:
-        description: List available Senders. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+        description: List EDID Processing compatible Senders. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
         body:
           example: !include ../examples/resourcelist-get-200.json
           type: !include schemas/resource-list.json
@@ -45,9 +45,6 @@ mediaType: application/json
           400:
             description: >
               Returned when the media profiles are rejected due to schema validation failure or if the Device doesn't support the requested mode.
-          422:
-            description: >
-              Returned when changing media parameters is not supported for the specific Sender.
           423:
             description: Returned when the media profiles can't be applied temporarily (e.g. due to an existing connection).
           500:
@@ -68,7 +65,7 @@ mediaType: application/json
 /receivers:
   displayName: Receivers
   get:
-    description: List available receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
+    description: List List EDID Processing compatible Receivers. All UUIDs are appended with / to indicate that the ID forms part of the URL for the next layer down.
     responses:
         200:
           body:
