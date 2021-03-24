@@ -47,7 +47,7 @@
       "maxItems": 3,
       "uniqueItems": true,
       "contains": {
-        "const": "RGB444"
+        "const": "RGB"
       },
       "items": {
         "type": "string",
