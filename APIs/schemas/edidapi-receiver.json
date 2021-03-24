@@ -6,11 +6,10 @@
   "items": {
     "type": "string",
     "enum": [
-      "sinks/",
-      "edid/"
+      "sinks/"
     ]
   },
-  "minItems": 2,
-  "maxItems": 2,
+  "minItems": 1,
+  "maxItems": 1,
   "uniqueItems": true
 }
