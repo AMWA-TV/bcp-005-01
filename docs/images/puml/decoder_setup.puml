@@ -1,0 +1,12 @@
+@startuml
+participant "HDMI Sink"
+participant "EDID Processing API"
+participant "IS-04 Device (IP to HDMI Gateway)"
+
+"HDMI Sink" <- "EDID Processing API": 1. Read EDID
+"HDMI Sink" -> "EDID Processing API": return
+"EDID Processing API" -> "EDID Processing API": 2. Parse EDID
+"EDID Processing API" -> "EDID Processing API": 3. Update data behind EDID Processing API
+"IS-04 Device (IP to HDMI Gateway)" <- "EDID Processing API": 4. Update Receivers
+"IS-04 Device (IP to HDMI Gateway)" -> "EDID Processing API": return
+@enduml

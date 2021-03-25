@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="876px" preserveAspectRatio="none" style="width:1354px;height:876px;" version="1.1" viewBox="0 0 1354 876" width="1354px" zoomAndPan="magnify"><defs/><g><!--MD5=[c905b14e70c1313ea8a3f81dd9acebd5]
+cluster proav--><rect fill="#FFFFFF" height="863" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="603" x="745" y="7"/><text fill="#000000" font-family="sans-serif" font-size="0" font-style="italic" lengthAdjust="spacing" textLength="0" x="1046.5" y="9">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="180" x="956.5" y="33.8516">IPMX ProAV System</text><text fill="#444444" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="1019" y="48.7637">[System]</text><!--MD5=[7ee545b81173658e350afee1f38df0eb]
+entity dec_1--><rect fill="#438DD5" height="99.1563" style="stroke:#3C7FC0;stroke-width:1.5;" width="203" x="761" y="68.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="89.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="130" x="797.5" y="107.3203">IPMX Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="77" x="824" y="122.2324">[IS-04 Node]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="138.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="775" y="154.3545">IPMX Gateway Decoder 1</text><!--MD5=[0b9c8a3801d44873885f99e51dfc1fdd]
+entity dec_2--><rect fill="#438DD5" height="99.1563" style="stroke:#3C7FC0;stroke-width:1.5;" width="202" x="761.5" y="202.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="223.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="130" x="797.5" y="241.3203">IPMX Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="77" x="824" y="256.2324">[IS-04 Node]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="272.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="775.5" y="288.3545">IPMX Gateway Decoder 2</text><!--MD5=[c97d6ef1e33b4be9c4075bcd38e68e66]
+entity dec_3--><rect fill="#438DD5" height="99.1563" style="stroke:#3C7FC0;stroke-width:1.5;" width="203" x="761" y="336.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="357.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="130" x="797.5" y="375.3203">IPMX Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="77" x="824" y="390.2324">[IS-04 Node]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="406.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="775" y="422.3545">IPMX Gateway Decoder 3</text><!--MD5=[948eb7ca3797e1501bbb8869daff92ce]
+entity enc--><rect fill="#438DD5" height="99.1563" style="stroke:#3C7FC0;stroke-width:1.5;" width="188" x="768.5" y="470.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="491.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="130" x="797.5" y="509.3203">IPMX Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="77" x="824" y="524.2324">[IS-04 Node]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="540.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="782.5" y="556.3545">IPMX Gateway Encoder</text><!--MD5=[78922e3f719f32bf869a7a66bdadb0f4]
+entity rds--><rect fill="#438DD5" height="115.4531" style="stroke:#3C7FC0;stroke-width:1.5;" width="193" x="766" y="604.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="625.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="815" y="643.3203">NMOS RDS</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="658.2324">[IS-04 RDS]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="674.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="780" y="690.3545">NMOS Registration and</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="799" y="706.6514">Discovery Service</text><!--MD5=[773ce6ccb1e73751bc548fd97971f6c1]
+entity nc--><rect fill="#438DD5" height="99.1563" style="stroke:#3C7FC0;stroke-width:1.5;" width="203" x="761" y="754.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="827" y="775.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="177" x="774" y="793.3203">Network Controller</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="158" x="783.5" y="808.2324">[IS-06 Network Controller]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="864.5" y="824.0576"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="775" y="840.3545">IS-06 Network Controller</text><!--MD5=[cf4bfc41de78c0fef7f9a001e80e613b]
+entity switch--><rect fill="#438DD5" height="66.5625" style="stroke:#3C7FC0;stroke-width:1.5;" width="165" x="1167" y="419.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="1214" y="440.6387">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="145" x="1177" y="458.3203">Network Switch</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="105" x="1197" y="473.2324">[Network Switch]</text><!--MD5=[785617a40335b4b3f4a4f9c464842b0b]
+entity person--><rect fill="#08427B" height="149.4844" style="stroke:#073B6F;stroke-width:1.5;" width="219" x="7" y="177.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="55" x="89" y="198.6387">«person»</text><image height="48" width="48" x="92.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="201.4688"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="109" x="62" y="264.3203">ProAV Staff</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="118.5" y="281.0889"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="21" y="297.3857">Responsible for setting up</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="45.5" y="313.6826">HDMI presentations</text><!--MD5=[ecded5a7d95d885f8ca55a838f0921c3]
+entity ics--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="213" x="346" y="209.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="396.5" y="230.6387">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="193" x="356" y="248.3203">IPMX Control System</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="454.5" y="265.0889"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="379" y="281.3857">IPMX Control System</text><!--MD5=[664131c2852f570dd7cfeed70116d165]
+link person to ics--><path d="M234.559,252 C267.957,252 304.29,252 337.502,252 " fill="none" id="person-ics" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="345.875,252,337.875,249,337.875,255,345.875,252" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="226.402,252,234.402,255,234.402,249,226.402,252" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="257" y="235.1387">Web GUI</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="257" y="249.1074">[Website]</text><!--MD5=[49e5fb7ec9d86deeb882e6aa86760332]
+link dec_1 to switch--><path d="M971.741,148.983 C1026.35,168.878 1090.64,199.316 1137,243 C1187.13,290.232 1219.27,365.1 1235.59,411.518 " fill="none" id="dec_1-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1238.26,419.277,1238.4898,410.7361,1232.8172,412.6909,1238.26,419.277" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="964.103,146.245,970.621,151.7691,972.6461,146.1212,964.103,146.245" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="100" x="1015.5" y="129.1387">ST 2110 Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="102" x="1012.5" y="143.1074">[IP Media, Event,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="48" x="1041.5" y="157.0762">Control]</text><!--MD5=[3c6c02697336baedb199e992889330cc]
+link dec_2 to switch--><path d="M971.317,284.392 C1023.3,302.32 1085.41,327.237 1137,358 C1162.93,373.463 1188.79,395.015 1209.07,413.683 " fill="none" id="dec_2-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1215.18,419.374,1211.3747,411.7242,1207.283,416.1126,1215.18,419.374" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="963.723,281.798,970.3238,287.2229,972.2633,281.5449,963.723,281.798" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="100" x="1015.5" y="263.1387">ST 2110 Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="102" x="1012.5" y="277.1074">[IP Media, Event,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="48" x="1041.5" y="291.0762">Control]</text><!--MD5=[d385800f1728244f33dc256ec0d8a381]
+link dec_3 to switch--><path d="M972.386,404.949 C1031.29,415.199 1103.15,427.706 1158.8,437.39 " fill="none" id="dec_3-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1166.89,438.797,1159.5227,434.47,1158.4941,440.3811,1166.89,438.797" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="964.151,403.516,971.5183,407.843,972.5469,401.9319,964.151,403.516" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="100" x="1015.5" y="378.1387">ST 2110 Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="102" x="1012.5" y="392.1074">[IP Media, Event,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="48" x="1041.5" y="406.0762">Control]</text><!--MD5=[ff7725c5a04681c83a6922309902de38]
+link enc to switch--><path d="M964.969,510.077 C1016.74,504.148 1080.54,495.505 1137,484 C1144.16,482.542 1151.53,480.872 1158.91,479.081 " fill="none" id="enc-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1166.92,477.095,1158.4327,476.112,1159.8791,481.935,1166.92,477.095" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="956.767,511.005,965.0537,513.086,964.3788,507.1241,956.767,511.005" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="100" x="1015.5" y="453.1387">ST 2110 Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="102" x="1012.5" y="467.1074">[IP Media, Event,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="48" x="1041.5" y="481.0762">Control]</text><!--MD5=[7b72354960171c403316c9dbc6882cc0]
+link nc to switch--><path d="M971.464,754.123 C1025.53,725.485 1089.43,685.717 1137,638 C1179.16,595.71 1212.01,534.452 1230.82,494.186 " fill="none" id="nc-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1234.28,486.673,1228.2097,492.6856,1233.66,495.1945,1234.28,486.673" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="964.243,757.913,972.7208,756.8518,969.9326,751.539,964.243,757.913" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="137" x="995" y="621.1387">Switch Control and</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49" x="1041" y="635.1074">Status</text><!--MD5=[9564f8cc3da34508046f1e21e272bc58]
+link rds to switch--><path d="M966.514,616.243 C1018.56,592.044 1082.14,560.808 1137,529 C1156.76,517.54 1177.65,503.782 1195.94,491.14 " fill="none" id="rds-switch" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1202.55,486.539,1194.2702,488.6473,1197.6981,493.5717,1202.55,486.539" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="959.249,619.611,967.7688,618.9687,965.2457,613.525,959.249,619.611" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="1019.5" y="526.1387">HTTP traffic</text><!--MD5=[c32efc0d945d1950df3014b8a7236799]
+link ics to dec_2--><path d="M559.101,252 C618.756,252 693.173,252 753.256,252 " fill="none" id="ics-to-dec_2" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="761.259,252,753.259,249,753.259,255,761.259,252" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="138" x="590" y="221.1387">Status and Control</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="124" x="595" y="235.1074">[NMOS RESTful APIs,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="617.5" y="249.0762">SNMPv3, scp]</text><!--MD5=[922be28ebffd8d3b89bd280926c180d3]
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_LEFT_RIGHT()
+
+Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
+
+System_Ext(ics, "IPMX Control System", "IPMX Control System")
+
+System_Boundary(proav, "IPMX ProAV System") {
+
+    Container(dec_1, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 1")
+    Container(dec_2, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 2")
+    Container(dec_3, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 3")
+    Container(enc, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Encoder")
+    Container(rds, "NMOS RDS", "IS-04 RDS", "NMOS Registration and Discovery Service")
+    Container(nc, "Network Controller", "IS-06 Network Controller", "IS-06 Network Controller")
+    Container(switch, "Network Switch", "Network Switch")
+}
+
+BiRel(person, ics, "Web GUI", "Website")
+BiRel(dec_1, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(dec_2, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(dec_3, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(enc, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(nc, switch, "Switch Control and Status")
+BiRel(rds, switch, "HTTP traffic")
+Rel(ics, dec_2, "Status and Control", "NMOS RESTful APIs, SNMPv3, scp")
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam package {
+    StereotypeFontSize 0
+    FontStyle plain
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+left to right direction
+
+rectangle "<$person>\n==ProAV Staff\n\n Responsible for setting up HDMI presentations" <<person>> as person
+
+rectangle "==IPMX Control System\n\n IPMX Control System" <<external_system>> as ics
+
+rectangle "==IPMX ProAV System\n<size:12>[System]</size>" <<boundary>> as proav {
+
+    rectangle "==IPMX Gateway\n//<size:12>[IS-04 Node]</size>//\n\n IPMX Gateway Decoder 1" <<container>> as dec_1
+    rectangle "==IPMX Gateway\n//<size:12>[IS-04 Node]</size>//\n\n IPMX Gateway Decoder 2" <<container>> as dec_2
+    rectangle "==IPMX Gateway\n//<size:12>[IS-04 Node]</size>//\n\n IPMX Gateway Decoder 3" <<container>> as dec_3
+    rectangle "==IPMX Gateway\n//<size:12>[IS-04 Node]</size>//\n\n IPMX Gateway Encoder" <<container>> as enc
+    rectangle "==NMOS RDS\n//<size:12>[IS-04 RDS]</size>//\n\n NMOS Registration and Discovery Service" <<container>> as rds
+    rectangle "==Network Controller\n//<size:12>[IS-06 Network Controller]</size>//\n\n IS-06 Network Controller" <<container>> as nc
+    rectangle "==Network Switch\n//<size:12>[Network Switch]</size>//" <<container>> as switch
+}
+
+person <<- ->> ics : **Web GUI**\n//<size:12>[Website]</size>//
+dec_1 <<- ->> switch : **ST 2110 Flows**\n//<size:12>[IP Media, Event, Control]</size>//
+dec_2 <<- ->> switch : **ST 2110 Flows**\n//<size:12>[IP Media, Event, Control]</size>//
+dec_3 <<- ->> switch : **ST 2110 Flows**\n//<size:12>[IP Media, Event, Control]</size>//
+enc <<- ->> switch : **ST 2110 Flows**\n//<size:12>[IP Media, Event, Control]</size>//
+nc <<- ->> switch : **Switch Control and Status**
+rds <<- ->> switch : **HTTP traffic**
+ics - ->> dec_2 : **Status and Control**\n//<size:12>[NMOS RESTful APIs, SNMPv3, scp]</size>//
+@enduml
+
+PlantUML version 1.2021.3beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

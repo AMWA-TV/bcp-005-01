@@ -1,0 +1,14 @@
+@startuml
+skinparam BoxPadding 10
+
+participant "HDMI Source"
+participant "EDID Processing API"
+participant "IS-04 Device (IP to HDMI Gateway)"
+participant "IPMX Control System"
+
+"IPMX Control System" -> "EDID Processing API": 1. Put Media Profiles
+"IPMX Control System" <- "EDID Processing API": return
+"HDMI Source" <- "EDID Processing API": 2. Present EDID
+"IS-04 Device (IP to HDMI Gateway)" <- "EDID Processing API": 3. Update Sources, Flows and Senders
+"IS-04 Device (IP to HDMI Gateway)" -> "EDID Processing API": return
+@enduml

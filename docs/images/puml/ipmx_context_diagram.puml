@@ -1,0 +1,10 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(person, "IT Staff", "Responsible for setting up and Controlling the ProAV System")
+System_Ext(ics, "IPMX Control System")
+System(proav, "IPMX ProAV System")
+
+BiRel(person, ics, "Web GUI", "Website")
+BiRel(ics, proav, "Network", "RESTful APIs, SNMPv3, scp")
+@enduml

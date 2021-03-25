@@ -1,0 +1,29 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_LEFT_RIGHT()
+
+Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
+
+System_Ext(ics, "IPMX Control System", "IPMX Control System")
+
+System_Boundary(proav, "IPMX ProAV System") {
+
+    Container(dec_1, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 1")
+    Container(dec_2, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 2")
+    Container(dec_3, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 3")
+    Container(enc, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Encoder")
+    Container(rds, "NMOS RDS", "IS-04 RDS", "NMOS Registration and Discovery Service")
+    Container(nc, "Network Controller", "IS-06 Network Controller", "IS-06 Network Controller")
+    Container(switch, "Network Switch", "Network Switch")
+}
+
+BiRel(person, ics, "Web GUI", "Website")
+BiRel(dec_1, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(dec_2, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(dec_3, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(enc, switch, "ST 2110 Flows", "IP Media, Event, Control")
+BiRel(nc, switch, "Switch Control and Status")
+BiRel(rds, switch, "HTTP traffic")
+Rel(ics, dec_2, "Status and Control", "NMOS RESTful APIs, SNMPv3, scp")
+@enduml
