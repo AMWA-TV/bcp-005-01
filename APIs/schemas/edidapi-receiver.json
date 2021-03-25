@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "description": "Describes the EDID Processing API /receivers/{receiverId} base resource",
+  "title": "EDID Processing API /receivers/{receiverId} base resource",
+  "items": {
+    "type": "string",
+    "enum": [
+      "sinks/"
+    ]
+  },
+  "minItems": 1,
+  "maxItems": 1,
+  "uniqueItems": true
+}

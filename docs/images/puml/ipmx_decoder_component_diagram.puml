@@ -3,20 +3,20 @@
 
 LAYOUT_LEFT_RIGHT()
 
-Person(person, "Pro AV Staff", "Responsible for setting up HDMI presentations")
+Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
 
 System_Ext(ics, "IPMX Control System", "IPMX Control System")
-System_Ext(hdmi, "HDMI Monitor", "HDMI Monitor")
+System_Ext(hdmi, "HDMI Sink", "HDMI Sink")
 System_Ext(switch, "Network Switch", "Network Switch")
 
 System_Boundary(proav, "IPMX Gateway Encoder") {
     Container(gw, "HDMI to IP Gateway", "IS-04 Device", "Converts JPEG-XS IP to HDMI Video and Audio")
-    Container(ipmx_controller, "IPMX Controller", "IPMX Device Control API", "IS-04 Device Control for the HDMI Destination")
+    Container(ipmx_controller, "IPMX Device Controller", "EDID Processing API", "")
 }
 
 BiRel(person, ics, "Web GUI", "Website")
 Rel(ics, ipmx_controller, "Get EDID info", "RESTful API")
-Rel(hdmi, ipmx_controller, "Receive EDID, Hot Plug Events", "HDMI DDC")
+Rel(hdmi, ipmx_controller, "Receive EDID", "HDMI DDC")
 Rel(ipmx_controller, gw, "Sets up IS-04 Receivers", "IS-04")
 Rel(ics, gw, "Subscribe to Sender's Flows", "IS-05")
 Rel(gw, hdmi, "HDMI Video and Audio", "HDMI")
