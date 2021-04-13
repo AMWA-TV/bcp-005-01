@@ -3,10 +3,10 @@ theme: jekyll-theme-primer
 spec_server: specs.amwa.tv
 
 # AMWA ID
-amwa_id: IS-EDID-CM
+amwa_id: BCP-EDID-RX-CAPS
 
 # Base name for site (typically lower case version of AMWA ID, or the repo name)
-baseurl: /nmos-edid-connection-management
+baseurl: /nmos-edid-to-receiver-caps-mapping
 
 # Which release or branch appears in header links and on the home page
 default_tree: branches/v1.0-dev # alternatively e.g. releases/v1.0
