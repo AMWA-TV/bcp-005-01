@@ -3,18 +3,18 @@
 
 LAYOUT_LEFT_RIGHT()
 
-Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
+Person(person, "IT Staff", "Responsible for setting up HDMI presentations")
 
-System_Ext(ics, "IPMX Control System", "IPMX Control System")
+System_Ext(ics, "NMOS Controller", "NMOS Controller")
 System_Ext(hdmi, "HDMI Source", "HDMI Source")
 System_Ext(switch, "Network Switch", "Network Switch")
 
-System_Boundary(proav, "IPMX Gateway Encoder") {
-    Container(gw, "HDMI to IP Gateway", "IS-04 Device", "Converts HDMI Video and Audio to JPEG-XS IP stream")
-    Container(ipmx_controller, "IPMX Device Controller", "EDID Processing API", "")
+System_Boundary(proav, "Gateway Sender") {
+    Container(gw, "Gateway Sender", "IS-04 Device", "Converts HDMI Video and Audio to an IP stream")
+    Container(ipmx_controller, "NMOS Device Controller", "Sink Metadata Processing API", "")
 }
 
-BiRel(person, ics, "Web GUI", "Website")
+BiRel(person, ics, "GUI", "Graphical User Interface")
 Rel(ics, ipmx_controller, "Control Media Profile(s)", "RESTful API")
 Rel(ipmx_controller, hdmi, "Set EDID and other HDMI Source Parameters", "HDMI DDC")
 Rel(ipmx_controller, gw, "Setup Sources, Flows and Senders", "IS-04")

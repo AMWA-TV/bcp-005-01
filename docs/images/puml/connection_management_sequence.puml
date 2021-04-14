@@ -2,26 +2,26 @@
 skinparam BoxPadding 10
 
 participant "ProAV Person"
-participant "IPMX Control System"
-box "IPMX Decoder 1"
-participant "Dec 1 IS-04"
-participant "Dec 1 IS-05"
+participant "NMOS Controller"
+box "Gateway Receiver 1"
+participant "Rcv 1 IS-04"
+participant "Rcv 1 IS-05"
 end box
-box "IPMX Decoder 2"
-participant "Dec 2 IS-04"
-participant "Dec 2 IS-05"
+box "Gateway Receiver 2"
+participant "Rcv 2 IS-04"
+participant "Rcv 2 IS-05"
 end box
-box "IPMX Encoder"
-participant "Enc IS-04"
-participant "Enc EDID API"
-participant "Enc IS-05"
+box "Gateway Sender"
+participant "Snd IS-04"
+participant "Snd Sink API"
+participant "Snd IS-05"
 end box
 
-"ProAV Person" -> "IPMX Control System": 1. Choose Sender and Receivers
-"IPMX Control System" -> "Dec 1 IS-04": 2. Get Receiver Caps 1
-"IPMX Control System" -> "Dec 2 IS-04": 3. Get Receiver Caps 2
-"IPMX Control System" -> "Enc EDID API": 4. Put Media Profiles
-"IPMX Control System" -> "Enc IS-05": 5. Start Stream
-"IPMX Control System" -> "Dec 1 IS-05": 6. Receive Stream
-"IPMX Control System" -> "Dec 2 IS-05": 7. Recieve Stream
+"ProAV Person" -> "NMOS Controller": 1. Choose Sender and Receivers
+"NMOS Controller" -> "Rcv 1 IS-04": 2. Get Receiver Caps 1
+"NMOS Controller" -> "Rcv 2 IS-04": 3. Get Receiver Caps 2
+"NMOS Controller" -> "Snd Sink API": 4. Put Media Profiles
+"NMOS Controller" -> "Snd IS-05": 5. Start Stream
+"NMOS Controller" -> "Rcv 1 IS-05": 6. Receive Stream
+"NMOS Controller" -> "Rcv 2 IS-05": 7. Recieve Stream
 @enduml
