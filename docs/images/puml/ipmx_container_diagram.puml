@@ -3,27 +3,25 @@
 
 LAYOUT_LEFT_RIGHT()
 
-Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
+Person(person, "IT Staff", "Responsible for setting up HDMI presentations")
 
-System_Ext(ics, "IPMX Control System", "IPMX Control System")
+System_Ext(ics, "NMOS Controller", "NMOS Controller")
 
-System_Boundary(proav, "IPMX ProAV System") {
+System_Boundary(proav, "NMOS System") {
 
-    Container(dec_1, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 1")
-    Container(dec_2, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 2")
-    Container(dec_3, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Decoder 3")
-    Container(enc, "IPMX Gateway", "IS-04 Node", "IPMX Gateway Encoder")
+    Container(dec_1, "Gateway Receiver", "IS-04 Node", "Gateway Receiver 1")
+    Container(dec_2, "Gateway Receiver", "IS-04 Node", "Gateway Receiver 2")
+    Container(dec_3, "Gateway Receiver", "IS-04 Node", "Gateway Receiver 3")
+    Container(Snd, "Gateway Sender", "IS-04 Node", "Gateway Receiver")
     Container(rds, "NMOS RDS", "IS-04 RDS", "NMOS Registration and Discovery Service")
-    Container(nc, "Network Controller", "IS-06 Network Controller", "IS-06 Network Controller")
     Container(switch, "Network Switch", "Network Switch")
 }
 
-BiRel(person, ics, "Web GUI", "Website")
+BiRel(person, ics, "GUI", "Graphical User Interface")
 BiRel(dec_1, switch, "ST 2110 Flows", "IP Media, Event, Control")
 BiRel(dec_2, switch, "ST 2110 Flows", "IP Media, Event, Control")
 BiRel(dec_3, switch, "ST 2110 Flows", "IP Media, Event, Control")
-BiRel(enc, switch, "ST 2110 Flows", "IP Media, Event, Control")
-BiRel(nc, switch, "Switch Control and Status")
+BiRel(Snd, switch, "ST 2110 Flows", "IP Media, Event, Control")
 BiRel(rds, switch, "HTTP traffic")
-Rel(ics, dec_2, "Status and Control", "NMOS RESTful APIs, SNMPv3, scp")
+Rel(ics, switch, "Status and Control", "NMOS RESTful APIs, SNMPv3")
 @enduml

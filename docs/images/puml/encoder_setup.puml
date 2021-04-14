@@ -1,14 +1,13 @@
 @startuml
+autonumber
 skinparam BoxPadding 10
 
 participant "HDMI Source"
-participant "EDID Processing API"
-participant "IS-04 Device (IP to HDMI Gateway)"
-participant "IPMX Control System"
+participant "NMOS Device Controller"
+participant "NMOS Controller"
 
-"IPMX Control System" -> "EDID Processing API": 1. Put Media Profiles
-"IPMX Control System" <- "EDID Processing API": return
-"HDMI Source" <- "EDID Processing API": 2. Present EDID
-"IS-04 Device (IP to HDMI Gateway)" <- "EDID Processing API": 3. Update Sources, Flows and Senders
-"IS-04 Device (IP to HDMI Gateway)" -> "EDID Processing API": return
+"NMOS Controller" -> "NMOS Device Controller": Put Media Profiles
+"NMOS Controller" <- "NMOS Device Controller": Return 200
+"HDMI Source" <- "NMOS Device Controller": Present EDID
+"NMOS Device Controller" -> "NMOS Node": Update Sources, Flows and Senders
 @enduml
