@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="408px" preserveAspectRatio="none" style="width:1561px;height:408px;" version="1.1" viewBox="0 0 1561 408" width="1561px" zoomAndPan="magnify"><defs/><g><!--MD5=[c905b14e70c1313ea8a3f81dd9acebd5]
-cluster proav--><rect fill="#FFFFFF" height="193" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="553" x="707" y="21.3301"/><text fill="#000000" font-family="sans-serif" font-size="0" font-style="italic" lengthAdjust="spacing" textLength="0" x="983.5" y="23.3301">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="209" x="879" y="48.1816">IPMX Gateway Encoder</text><text fill="#444444" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="956" y="63.0938">[System]</text><!--MD5=[5f97cdfbafef6a5cbddfbf6bdd3803d1]
-entity gw--><rect fill="#438DD5" height="115.4531" style="stroke:#3C7FC0;stroke-width:1.5;" width="201" x="1043" y="82.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="1108" y="103.9688">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="181" x="1053" y="121.6504">HDMI to IP Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="1100.5" y="136.5625">[IS-04 Device]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1145.5" y="152.3877"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="1061.5" y="168.6846">Converts JPEG-XS IP to</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="1065.5" y="184.9814">HDMI Video and Audio</text><!--MD5=[edb3b2f3aa0f00d087abab35caa55bcd]
-entity ipmx_controller--><rect fill="#438DD5" height="85.1875" style="stroke:#3C7FC0;stroke-width:1.5;" width="151" x="723" y="82.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="763" y="103.9688">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="110" x="740.5" y="121.6504">IPMX Device</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="93" x="752" y="140.2754">Controller</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="131" x="733" y="155.1875">[EDID Processing API]</text><!--MD5=[785617a40335b4b3f4a4f9c464842b0b]
-entity person--><rect fill="#08427B" height="149.4844" style="stroke:#073B6F;stroke-width:1.5;" width="219" x="7" y="127.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="55" x="89" y="148.9688">«person»</text><image height="48" width="48" x="92.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="151.7988"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="109" x="62" y="214.6504">ProAV Staff</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="118.5" y="231.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="21" y="247.7158">Responsible for setting up</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="45.5" y="264.0127">HDMI presentations</text><!--MD5=[ecded5a7d95d885f8ca55a838f0921c3]
-entity ics--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="213" x="346" y="159.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="396.5" y="180.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="193" x="356" y="198.6504">IPMX Control System</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="454.5" y="215.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="379" y="231.7158">IPMX Control System</text><!--MD5=[0ca0a660601c17ce742c1a184f6d7edb]
-entity hdmi--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="132" x="1423" y="18.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="1433" y="39.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="88" x="1445" y="57.6504">HDMI Sink</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1491" y="74.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="1455" y="90.7158">HDMI Sink</text><!--MD5=[cf4bfc41de78c0fef7f9a001e80e613b]
-entity switch--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="165" x="716" y="316.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="742.5" y="337.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="145" x="726" y="355.6504">Network Switch</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="800.5" y="372.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="744" y="388.7158">Network Switch</text><!--MD5=[664131c2852f570dd7cfeed70116d165]
-link person to ics--><path d="M234.559,202.3301 C267.957,202.3301 304.29,202.3301 337.502,202.3301 " fill="none" id="person-ics" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="345.875,202.3301,337.875,199.3301,337.875,205.3301,345.875,202.3301" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="226.402,202.3301,234.402,205.3301,234.402,199.3301,226.402,202.3301" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="257" y="185.4688">Web GUI</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="257" y="199.4375">[Website]</text><!--MD5=[10cee6222cd1669b4dca8bcccb1520e3]
-link ics to ipmx_controller--><path d="M559.049,178.7041 C609.178,167.4831 668.206,154.2711 714.99,143.7991 " fill="none" id="ics-to-ipmx_controller" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="722.983,142.0101,714.5209,140.8296,715.8313,146.6848,722.983,142.0101" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="95" x="590" y="136.4688">Get EDID info</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="598" y="150.4375">[RESTful API]</text><!--MD5=[6fceafdaabab9a727b9b40d0575d290e]
-link hdmi to ipmx_controller--><path d="M1422.84,40.2591 C1412.94,37.8021 1402.76,35.6911 1393,34.3301 C1341.5,27.1531 1327.9,31.0731 1276,34.3301 C1112.82,44.5721 1069.24,39.1691 911,80.3301 C901.435,82.8181 891.595,85.9251 881.908,89.3361 " fill="none" id="hdmi-to-ipmx_controller" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="874.18,92.1321,882.7234,92.2317,880.6823,86.5896,874.18,92.1321" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="1097.5" y="18.4688">Receive EDID</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="1107.5" y="32.4375">[HDMI DDC]</text><!--MD5=[edc25d12aca6b7edff7f3825d062802e]
-link ipmx_controller to gw--><path d="M874.349,128.6031 C921.219,130.6531 982.39,133.3281 1034.47,135.6061 " fill="none" id="ipmx_controller-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1042.75,135.9681,1034.8919,132.6139,1034.624,138.6079,1042.75,135.9681" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="912" y="100.4688">Sets up IS-04</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="71" x="926.5" y="114.4375">Receivers</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="941" y="128.4063">[IS-04]</text><!--MD5=[52e3ac43d1e5856970358859053252d9]
-link ics to gw--><path d="M559.134,221.7381 C646.06,234.6061 772.216,246.1431 881,228.3301 C933.055,219.8061 988.713,202.3321 1035.24,185.1861 " fill="none" id="ics-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1042.93,182.3271,1034.386,182.3008,1036.4755,187.9252,1042.93,182.3271" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="750.5" y="197.4688">Subscribe to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="107" x="745" y="211.4375">Sender's Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="777.5" y="225.4063">[IS-05]</text><!--MD5=[ef3b6047dc5b0c52e16dd83b170e80fe]
-link gw to hdmi--><path d="M1244.32,117.3741 C1298.94,104.8121 1365.41,89.5251 1415.12,78.0921 " fill="none" id="gw-to-hdmi" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1422.95,76.2911,1414.4802,75.1675,1415.8298,81.0137,1422.95,76.2911" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="111" x="1277" y="54.4688">HDMI Video and</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="40" x="1314.5" y="68.4375">Audio</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1313.5" y="82.4063">[HDMI]</text><!--MD5=[f37b9220164db68125e0fc823d632548]
-link switch to gw--><path d="M881.003,349.4774 C923.048,341.4768 973.626,327.0893 1013,301.3301 C1050.27,276.9451 1081.85,238.3391 1104.5,205.0441 " fill="none" id="switch-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1109.19,198.0271,1102.2459,203.0049,1107.2312,206.3435,1109.19,198.0271" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="87" x="918.5" y="284.4688">Media Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="61" x="931.5" y="298.4375">[ST 2110]</text><!--MD5=[411d085cbb45eda9d4f7bb33b7693290]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="421px" preserveAspectRatio="none" style="width:1608px;height:421px;" version="1.1" viewBox="0 0 1608 421" width="1608px" zoomAndPan="magnify"><defs/><g><!--MD5=[c905b14e70c1313ea8a3f81dd9acebd5]
+cluster proav--><rect fill="#FFFFFF" height="193" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="607" x="700" y="34.3301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="38" x="984.5" y="41.8994">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="164" x="921.5" y="61.1816">Gateway Receiver</text><text fill="#444444" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="976" y="76.0938">[System]</text><!--MD5=[5f97cdfbafef6a5cbddfbf6bdd3803d1]
+entity gw--><rect fill="#438DD5" height="115.4531" style="stroke:#3C7FC0;stroke-width:1.5;" width="206" x="1085" y="95.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="1152.5" y="116.9688">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="164" x="1106" y="134.6504">Gateway Receiver</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="1145" y="149.5625">[IS-04 Device]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1190" y="165.3877"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="1099" y="181.6846">Converts an IP stream to</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="1110" y="197.9814">HDMI Video and Audio</text><!--MD5=[edb3b2f3aa0f00d087abab35caa55bcd]
+entity ipmx_controller--><rect fill="#438DD5" height="85.1875" style="stroke:#3C7FC0;stroke-width:1.5;" width="207" x="716" y="95.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="784" y="116.9688">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="119" x="757" y="134.6504">NMOS Device</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="93" x="773" y="153.2754">Controller</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="187" x="726" y="168.1875">[Sink Metadata Processing API]</text><!--MD5=[785617a40335b4b3f4a4f9c464842b0b]
+entity person--><rect fill="#08427B" height="149.4844" style="stroke:#073B6F;stroke-width:1.5;" width="219" x="7" y="140.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="55" x="89" y="161.9688">«person»</text><image height="48" width="48" x="92.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="164.7988"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="71" x="81" y="227.6504">IT Staff</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="118.5" y="244.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="21" y="260.7158">Responsible for setting up</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="45.5" y="277.0127">HDMI presentations</text><!--MD5=[ecded5a7d95d885f8ca55a838f0921c3]
+entity ics--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="172" x="385" y="172.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="415" y="193.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="152" x="395" y="211.6504">NMOS Controller</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="473" y="228.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="413.5" y="244.7158">NMOS Controller</text><!--MD5=[0ca0a660601c17ce742c1a184f6d7edb]
+entity hdmi--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="132" x="1470" y="31.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="1480" y="52.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="88" x="1492" y="70.6504">HDMI Sink</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1538" y="87.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="1502" y="103.7158">HDMI Sink</text><!--MD5=[cf4bfc41de78c0fef7f9a001e80e613b]
+entity switch--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="165" x="737" y="329.8301"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="763.5" y="350.9688">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="145" x="747" y="368.6504">Network Switch</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="821.5" y="385.4189"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="765" y="401.7158">Network Switch</text><!--MD5=[664131c2852f570dd7cfeed70116d165]
+link person to ics--><path d="M234.29,215.3301 C280.627,215.3301 333.175,215.3301 376.878,215.3301 " fill="none" id="person-ics" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="384.932,215.3301,376.932,212.3301,376.932,218.3301,384.932,215.3301" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="226.138,215.3301,234.138,218.3301,234.138,212.3301,226.138,215.3301" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="23" x="294" y="184.4688">GUI</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="93" x="257" y="198.4375">[Graphical User</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="59" x="276" y="212.4063">Interface]</text><!--MD5=[10cee6222cd1669b4dca8bcccb1520e3]
+link ics to ipmx_controller--><path d="M557.207,196.3951 C602.573,186.3141 658.908,173.7951 707.641,162.9651 " fill="none" id="ics-to-ipmx_controller" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="715.706,161.1731,707.2457,159.9801,708.5474,165.8372,715.706,161.1731" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="95" x="588" y="153.4688">Get EDID info</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="596" y="167.4375">[RESTful API]</text><!--MD5=[6fceafdaabab9a727b9b40d0575d290e]
+link hdmi to ipmx_controller--><path d="M1469.84,53.2591 C1459.94,50.8021 1449.76,48.6911 1440,47.3301 C1224.67,17.3251 1164.9,44.7091 953,93.3301 C945.871,94.9661 938.585,96.8391 931.279,98.8721 " fill="none" id="hdmi-to-ipmx_controller" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="923.35,101.1371,931.8662,101.8262,930.2194,96.0566,923.35,101.1371" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="80" x="1148" y="18.4688">Sends EDID</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="1152" y="32.4375">[HDMI DDC]</text><!--MD5=[edc25d12aca6b7edff7f3825d062802e]
+link ipmx_controller to gw--><path d="M923.078,142.5281 C970.921,144.4861 1027.93,146.8201 1076.7,148.8161 " fill="none" id="ipmx_controller-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1084.76,149.1461,1076.89,145.82,1076.6435,151.815,1084.76,149.1461" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="954" y="113.4688">Sets up IS-04</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="71" x="968.5" y="127.4375">Receivers</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="983" y="141.4063">[IS-04]</text><!--MD5=[52e3ac43d1e5856970358859053252d9]
+link ics to gw--><path d="M557.355,231.2381 C648.476,245.6671 796.812,261.8071 923,241.3301 C974.95,232.9001 1030.49,215.7091 1077.16,198.7411 " fill="none" id="ics-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1084.87,195.9111,1076.3262,195.852,1078.394,201.4844,1084.87,195.9111" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="771.5" y="210.4688">Subscribe to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="107" x="766" y="224.4375">Sender's Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="798.5" y="238.4063">[IS-05]</text><!--MD5=[ef3b6047dc5b0c52e16dd83b170e80fe]
+link gw to hdmi--><path d="M1291.41,129.9481 C1346.26,117.4241 1412.54,102.2891 1462.11,90.9721 " fill="none" id="gw-to-hdmi" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1469.92,89.1901,1461.4542,88.0366,1462.7832,93.8876,1469.92,89.1901" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="111" x="1324" y="67.4688">HDMI Video and</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="40" x="1361.5" y="81.4375">Audio</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1360.5" y="95.4063">[HDMI]</text><!--MD5=[f37b9220164db68125e0fc823d632548]
+link switch to gw--><path d="M902.051,365.0822 C949.611,357.831 1009.08,343.329 1055,314.3301 C1093.25,290.1761 1125.65,251.1581 1148.78,217.5831 " fill="none" id="switch-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1153.28,210.9461,1146.3039,215.8791,1151.2677,219.2497,1153.28,210.9461" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="87" x="960.5" y="297.4688">Media Flows</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="61" x="973.5" y="311.4375">[ST 2110]</text><!--MD5=[03e05037fe36c84a795c9a2125de8752]
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 LAYOUT_LEFT_RIGHT()
 
-Person(person, "ProAV Staff", "Responsible for setting up HDMI presentations")
+Person(person, "IT Staff", "Responsible for setting up HDMI presentations")
 
-System_Ext(ics, "IPMX Control System", "IPMX Control System")
+System_Ext(ics, "NMOS Controller", "NMOS Controller")
 System_Ext(hdmi, "HDMI Sink", "HDMI Sink")
 System_Ext(switch, "Network Switch", "Network Switch")
 
-System_Boundary(proav, "IPMX Gateway Encoder") {
-    Container(gw, "HDMI to IP Gateway", "IS-04 Device", "Converts JPEG-XS IP to HDMI Video and Audio")
-    Container(ipmx_controller, "IPMX Device Controller", "EDID Processing API", "")
+System_Boundary(proav, "Gateway Receiver") {
+    Container(gw, "Gateway Receiver", "IS-04 Device", "Converts an IP stream to HDMI Video and Audio")
+    Container(ipmx_controller, "NMOS Device Controller", "Sink Metadata Processing API", "")
 }
 
-BiRel(person, ics, "Web GUI", "Website")
+BiRel(person, ics, "GUI", "Graphical User Interface")
 Rel(ics, ipmx_controller, "Get EDID info", "RESTful API")
-Rel(hdmi, ipmx_controller, "Receive EDID", "HDMI DDC")
+Rel(hdmi, ipmx_controller, "Sends EDID", "HDMI DDC")
 Rel(ipmx_controller, gw, "Sets up IS-04 Receivers", "IS-04")
 Rel(ics, gw, "Subscribe to Sender's Flows", "IS-05")
 Rel(gw, hdmi, "HDMI Video and Audio", "HDMI")
@@ -39,6 +39,7 @@ Rel(switch, gw, "Media Flows", "ST 2110")
 @enduml
 
 @startuml
+
 
 
 
@@ -78,17 +79,37 @@ skinparam Arrow {
 }
 
 skinparam package {
-    StereotypeFontSize 0
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
     FontStyle plain
+    BackgroundColor #FFFFFF
 }
 
 skinparam rectangle<<boundary>> {
     Shadowing false
-    StereotypeFontSize 0
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
     FontColor #444444
     BorderColor #444444
+    BackgroundColor #FFFFFF
     BorderStyle dashed
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -343,6 +364,7 @@ sprite $person2 [48x48/16] {
 
 
 
+
 skinparam rectangle<<container>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
@@ -397,27 +419,27 @@ skinparam queue<<external_container>> {
 
 left to right direction
 
-rectangle "<$person>\n==ProAV Staff\n\n Responsible for setting up HDMI presentations" <<person>> as person
+rectangle "<$person>\n==IT Staff\n\n Responsible for setting up HDMI presentations" <<person>> as person 
 
-rectangle "==IPMX Control System\n\n IPMX Control System" <<external_system>> as ics
-rectangle "==HDMI Sink\n\n HDMI Sink" <<external_system>> as hdmi
-rectangle "==Network Switch\n\n Network Switch" <<external_system>> as switch
+rectangle "==NMOS Controller\n\n NMOS Controller" <<external_system>> as ics 
+rectangle "==HDMI Sink\n\n HDMI Sink" <<external_system>> as hdmi 
+rectangle "==Network Switch\n\n Network Switch" <<external_system>> as switch 
 
-rectangle "==IPMX Gateway Encoder\n<size:12>[System]</size>" <<boundary>> as proav {
-    rectangle "==HDMI to IP Gateway\n//<size:12>[IS-04 Device]</size>//\n\n Converts JPEG-XS IP to HDMI Video and Audio" <<container>> as gw
-    rectangle "==IPMX Device Controller\n//<size:12>[EDID Processing API]</size>//" <<container>> as ipmx_controller
+rectangle "==Gateway Receiver\n<size:12>[System]</size>" <<boundary>> as proav  {
+    rectangle "==Gateway Receiver\n//<size:12>[IS-04 Device]</size>//\n\n Converts an IP stream to HDMI Video and Audio" <<container>> as gw 
+    rectangle "==NMOS Device Controller\n//<size:12>[Sink Metadata Processing API]</size>//" <<container>> as ipmx_controller 
 }
 
-person <<- ->> ics : **Web GUI**\n//<size:12>[Website]</size>//
+person <<- ->> ics : **GUI**\n//<size:12>[Graphical User Interface]</size>//
 ics - ->> ipmx_controller : **Get EDID info**\n//<size:12>[RESTful API]</size>//
-hdmi - ->> ipmx_controller : **Receive EDID**\n//<size:12>[HDMI DDC]</size>//
+hdmi - ->> ipmx_controller : **Sends EDID**\n//<size:12>[HDMI DDC]</size>//
 ipmx_controller - ->> gw : **Sets up IS-04 Receivers**\n//<size:12>[IS-04]</size>//
 ics - ->> gw : **Subscribe to Sender's Flows**\n//<size:12>[IS-05]</size>//
 gw - ->> hdmi : **HDMI Video and Audio**\n//<size:12>[HDMI]</size>//
 switch - ->> gw : **Media Flows**\n//<size:12>[ST 2110]</size>//
 @enduml
 
-PlantUML version 1.2021.3beta6(Unknown compile time)
+PlantUML version 1.2021.5beta3(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM

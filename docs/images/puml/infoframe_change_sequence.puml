@@ -1,10 +1,8 @@
 @startuml
-participant "HDMI Source User"
-participant "HDMI Source"
-participant "EDID Processing API"
-participant "IS-04 Device (IP to HDMI Gateway)"
+autonumber
 
-"HDMI Source User" -> "HDMI Source": 1. Change Video Format
-"HDMI Source" -> "EDID Processing API": 2. Send changed InfoFrames
-"IS-04 Device (IP to HDMI Gateway)" <- "EDID Processing API": 3. Update Sources, Flows and Senders
+"HDMI Source" -> "NMOS Device Controller": Send InfoFrames
+alt InfoFrame is changed
+    "NMOS Device Controller" -> "NMOS Node": Update Sources, Flows and Senders
+end
 @enduml
