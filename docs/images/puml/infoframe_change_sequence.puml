@@ -1,8 +1,0 @@
-@startuml
-autonumber
-
-"HDMI Source" -> "NMOS Device Controller": Send InfoFrames
-alt InfoFrame is changed
-    "NMOS Device Controller" -> "NMOS Node": Update Sources, Flows and Senders
-end
-@enduml
