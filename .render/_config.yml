@@ -3,7 +3,7 @@ theme: jekyll-theme-primer
 spec_server: specs.amwa.tv
 
 # AMWA ID
-amwa_id: BCP-EDID-RX-CAPS
+amwa_id: BCP-005-01
 
 # Base name for site (typically lower case version of AMWA ID, or the repo name)
 baseurl: /nmos-edid-to-receiver-caps-mapping
