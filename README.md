@@ -1,7 +1,7 @@
 # AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping \[Work In Progress\]
 
-[![Lint Status](https://github.com/AMWA-TV/nmos-edid-to-receiver-caps-mapping/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-edid-to-receiver-caps-mapping/actions?query=workflow%3ALint)
-[![Render Status](https://github.com/AMWA-TV/nmos-edid-to-receiver-caps-mapping/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-edid-to-receiver-caps-mapping/actions?query=workflow%3ARender)
+[![Lint Status](https://github.com/AMWA-TV/bcp-005-01/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/bcp-005-01/actions?query=workflow%3ALint)
+[![Render Status](https://github.com/AMWA-TV/bcp-005-01/workflows/Render/badge.svg)](https://github.com/AMWA-TV/bcp-005-01/actions?query=workflow%3ARender)
 
 <!-- INTRO-START -->
 
