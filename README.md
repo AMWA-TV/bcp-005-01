@@ -11,11 +11,10 @@
 
 ## Why does it matter?
 
-- Receivers associated with physical devices providing EDID need to present their capabilities to Controllers
+- Receivers associated with Outputs that provide EDID need to present its contents to Controllers
 
 ## How does it work?
 
-- Defines physical devices associated with Receivers as Sinks which may have EDID
 - Describes how each EDID section is translated into Receiver Capabilities
 - Gives recommendations regarding taking certain EDID sections into account
 
