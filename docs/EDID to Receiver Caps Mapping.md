@@ -31,7 +31,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## Video Receivers
 
-If an [IS-04][IS-04] Video Receiver is associated with an Output which has EDID, its supported video formats MUST be mapped into Receiver's Capabilities according to the rules below.
+If an [IS-04][IS-04] Video Receiver is associated with an Output which has an EDID, the optional mapping of the EDID supported video formats into Receiver's Capabilities SHALL be performed according to the rules below.
 
 ### Video Timings
 

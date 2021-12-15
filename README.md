@@ -11,7 +11,7 @@
 
 ## Why does it matter?
 
-- Receivers associated with Outputs that provide EDID need to present its contents to Controllers
+- Receivers associated with Outputs that provide EDID may need to present its contents to Controllers
 
 ## How does it work?
 
