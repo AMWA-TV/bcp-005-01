@@ -10,12 +10,10 @@
 
 The purpose of AMWA BCP-005-01 is to provide Best Current Practice guidelines for mapping EDID fields to Receiver Capabilities in the case Receiver is associated with an Output connected to a downstream counterpart which provides EDID.
 
-The proposed mapping is affected when the Receiver is:
+The proposed mapping provides the mechanism for converting EDID information into Receiver Capabilities. The effective Receiver Capabilities MAY differ from those obtained from the proposed mapping when the Receiver is:
 
 - Capable of altering signal (e.g. it is able to consume 4K and downscale it before passing to the Output which downstream counterpart supports up to HD resolutions)
 - Constrained beyond the capabilities of the downstream counterpart of the Output (e.g. it supports resolution up to 1080p but the Output is connected to a 4K monitor)
-
-The Receiver SHALL include any types of conversion, omit any restrictions, or reflect the internal processing in own Receiver Capabilities.
 
 The term 'Receiver' used in this document is defined in [IS-04][IS-04].
 
