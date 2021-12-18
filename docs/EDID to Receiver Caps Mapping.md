@@ -6,49 +6,32 @@
 
 {:toc}
 
-Extended Display Identification Data (EDID) is a metadata format for an apparatus to describe its capabilities as a video source (e.g. graphics card or set-top box). The data format is defined by a standard published by the Video Electronics Standards Association (VESA). This document is targeted against [E-EDID A2][E-EDID] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861-G][CTA-861] Extension Block imposed by HDMI. The information present in the EDID is subject to the requirements of the [Display Monitor Timing (DMT)][DMT] specification Version 1 Rev 12.
+## Introduction
 
-[BCP-004-01][BCP-004-01] Receiver Capabilities defined a methodology for describing the Receivers with constraints on the properties of streams which related to [IS-04][IS-04] Senders. This is used to populate Receiver Capabilities for use with [IS-11][IS-11] Sink Metadata Processing.
+The purpose of AMWA BCP-005-01 is to provide Best Current Practice guidelines for mapping EDID fields to Receiver Capabilities in the case Receiver is associated with an Output connected to a downstream counterpart which provides EDID.
 
-## Scope
+The proposed mapping provides the mechanism for converting EDID information into Receiver Capabilities. The effective Receiver Capabilities MAY differ from those obtained from the proposed mapping when the Receiver is:
 
-This document provides Best Current Practice guidelines for how to implement a mapping of EDID fields to Receiver Capabilities in order to have a specific way of representing an EDID Sink's Device through an associated [IS-04][IS-04] Receiver.
+- Capable of altering signal (e.g. it is able to consume 4K and downscale it before passing to the Output which downstream counterpart supports up to HD resolutions)
+- Constrained beyond the capabilities of the downstream counterpart of the Output (e.g. it supports resolution up to 1080p but the Output is connected to a 4K monitor)
+
+The term 'Receiver' used in this document is defined in [IS-04][IS-04].
+
+The terms 'Parameter Constraint' and 'Constraint Set' used in this document are defined in [BCP-004-01][BCP-004-01].
+
+The term 'Output' used in this document is defined in [IS-11][IS-11].
+
+BCP-005-01 is intended to be used in conjunction with an [IS-11][IS-11] and [BCP-004-01][BCP-004-01] deployment; however it has been written in such a way to provide useful functionality even in the absence of such a system.
+
+This document is targeted against [E-EDID A2][E-EDID] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861-G][CTA-861] Extension Block imposed by HDMI. The information present in the EDID is subject to the requirements of the [Display Monitor Timing (DMT)][DMT] specification Version 1 Rev 12.
 
 ## Use of Normative Language
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119][RFC-2119].
 
-## Normative References
-
-These appear at the end of the Markdown source for this document, and are referenced as hyperlinks within the main body.
-
-## Definitions
-
-_See also the [NMOS Glossary](https://specs.amwa.tv/nmos/branches/main/docs/4.0._Glossary.html), and definitions within RFCs._
-
-### Gateway Device
-
-A device which encapsulates a digital video or/and audio signal (usually, from a physical connection) into IP packets. Conversely, the device MAY perform the reverse operation for IP packets to a digital signal.
-
-### Sink
-
-A media consuming unit described by an EDID which can be associated to a Receiver.
-
-## Introduction
-
-Gateway Devices which bridge a NMOS Receiver to baseband connection need to expose the capabilities of the baseband interface through the NMOS resource to enable connection management. This can be obtained by mapping a Sink's EDID to a Receiver's Capabilities and factoring the abilities of the Gateway Device.
-
-The mapping is affected when a Gateway Device is:
-
-- Capable of altering a signal (e.g. it is able to consume 4K and downscale it for the Sink who supports up to HD resolutions)
-- Constrained beyond the capabilities of the Sink (e.g. it supports resolution up to 1080 but is connected to a 4k monitor)
-- Using any internal processing before passing the signal to the Sink (e.g. support multiple Sinks per Receiver and use the greatest common denominator to constrain itself)
-
-The Gateway Device SHALL include any types of conversion, omit any restrictions, or reflect the internal processing in the capabilities of the Receiver.
-
 ## Video Receivers
 
-If an [IS-04][IS-04] Video Receiver is associated with a Sink which has EDID, its supported video formats MUST be mapped into Receiver's Capabilities according to the rules below.
+If an [IS-04][IS-04] Video Receiver is associated with an Output which has an EDID, the optional mapping of the EDID supported video formats into Receiver's Capabilities SHALL be performed according to the rules below.
 
 ### Video Timings
 
@@ -222,7 +205,7 @@ This value MUST be transformed into `urn:x-nmos:cap:format:color_sampling` with 
 
 #### CTA-861 Extension Block
 
-The supported color subsampling formats in the CTA Extension Header ([CTA-861][CTA-861] section 7.5) indicates whether the Sink supports `YCbCr-4:2:2` and `YCbCr-4:4:4` respectively in addition to `RGB`.
+The supported color subsampling formats in the CTA Extension Header ([CTA-861][CTA-861] section 7.5) indicate `YCbCr-4:2:2` and `YCbCr-4:4:4` support in addition to `RGB`.
 
 YCbCr 4:2:0 Capability Map Data Block ([CTA-861][CTA-861] section 7.5.11) shows which timings support `YCbCr-4:2:0` in addition to subsampling formats listed in the CTA Extension Header. These timings MUST contain `YCbCr-4:2:0` within the possible values for `urn:x-nmos:cap:format:color_sampling` with associated Constraint Set.
 
@@ -250,7 +233,7 @@ Each of these Parameter Constraints MUST use `enum` Constraint Keyword.
 
 [RFC-2119]: https://tools.ietf.org/html/rfc2119 "Key words for use in RFCs to Indicate Requirement Levels"
 [IS-04]: https://specs.amwa.tv/is-04 "AMWA IS-04 NMOS Discovery and Registration Specification (Stable)"
-[IS-11]: https://specs.amwa.tv/is-11 "AMWA IS-11 NMOS Sink Metadata Processing"
+[IS-11]: https://specs.amwa.tv/is-11 "AMWA IS-11 NMOS Flow Compatibility Management"
 [BCP-004-01]: https://specs.amwa.tv/bcp-004-01/ "AMWA NMOS Receiver Capabilities"
 [NMOS Capabilities]: https://github.com/AMWA-TV/nmos-parameter-registers/blob/main/capabilities/README.md "AMWA NMOS Parameter Registers - NMOS Capabilities"
 [E-EDID]: https://vesa.org/vesa-standards/ "VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2"
