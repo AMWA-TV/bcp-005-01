@@ -1,0 +1,10 @@
+amwa_id: BCP-005-01
+url: https://specs.amwa.tv/bcp-005-01
+name: EDID to Receiver Capabilities Mapping
+status: Work In Progress
+repo_name: bcp-005-01
+alt_repo_name: nmos-edid-to-receiver-caps-mapping
+repo_url: https://github.com/AMWA-TV/bcp-005-01
+releases:
+default_branch: v1.0-dev
+show_in_index: true
