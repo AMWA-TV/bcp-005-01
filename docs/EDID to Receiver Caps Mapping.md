@@ -31,24 +31,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 If an [IS-04][IS-04] Video Receiver is associated with an Output which has an EDID, the optional mapping of the EDID supported video formats into Receiver's Capabilities SHALL be performed according to the rules below.
 
-### Video Timings
+### Video Timing Modes
 
-Video timings, described in [E-EDID][E-EDID], provide information about the video frame size and rate. There are multiple blocks which keep information about timings each with their own mapping requirements.
+Video timing modes, described in [E-EDID][E-EDID], provide information about the video frame size and vertical rate. There are multiple blocks which keep information about these modes, each has its own mapping requirements.
 
-Each video timing SHOULD be present in the Receiver's Capabilities as a Constraint Set with a non-empty
+Each video timing mode SHOULD be expressed in the Receiver's Capabilities as a separate Constraint Set or a part of a more common Constraint Set with non-empty
 
 - `urn:x-nmos:cap:format:frame_width`
 - `urn:x-nmos:cap:format:frame_height`
-- `urn:x-nmos:cap:format:grain_rate` which MUST be the exact frame rate of the signal
+- `urn:x-nmos:cap:format:grain_rate` which MUST reflect the exact frame rate of the signal
 
 The timing descriptors MAY include one or more of the following mappings:
 
 - `urn:x-nmos:cap:format:interlace_mode`
 - `urn:x-nmos:cap:meta:preference`
 
-Each of these Parameter Constraints MUST use `enum` Constraint Keyword.
-
-Video timings with _Reduced Blanking_ MAY be determined by the exact `urn:x-nmos:cap:format:grain_rate`.
+Video timing modes with Reduced Blanking MAY be determined by the exact `urn:x-nmos:cap:format:grain_rate`.
 
 #### Established Timings I, II & III
 
@@ -132,16 +130,16 @@ For example, given the bytes of Standard Timings were `D1 C0 01 01 01 01 01 01 0
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
-Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. The first, _Prefered Timing Mode_ is an obligation and MUST have a `urn:x-nmos:cap:meta:preference` value of `100`. Any Detailed Timing Descriptors in [CTA-861][CTA-861] Extension BLock (section 7.2.1) MUST follow the mapping.
+Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. The first, _Preferred Timing Mode_ is an obligation and MUST have a `urn:x-nmos:cap:meta:preference` value of `100`. Any Detailed Timing Descriptors in [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
 
 The mapping is defined in section 3.10.2 and is applied as follows:
 
 - `urn:x-nmos:cap:format:interlace_mode` MUST be set according to _Signal Interface Type_ defined in table 3.22
 - `urn:x-nmos:cap:format:frame_width` MUST be _Horizontal Addressable Video in pixels_
 - `urn:x-nmos:cap:format:frame_height` MUST be calculated using the _Vertical Addressable Video in lines_ which MUST be multiplied by 2 when _Signal Interface Type_ indicates interlaced
-- `urn:x-nmos:cap:format:grain_rate` SHALL be accurately represented by
-  - `numerator` MUST be calculated using _Pixel Clock_
-  - `denominator` MUST be calculated with _Horizontal Addressable Video in pixels_, _Horizontal Blanking in pixels_, _Vertical Addressable Video in lines_ and _Vertical Blanking in lines_
+- `urn:x-nmos:cap:format:grain_rate` is represented by
+  - `numerator` which MUST be calculated using _Pixel Clock_
+  - `denominator` which MUST be calculated with _Horizontal Addressable Video in pixels_, _Horizontal Blanking in pixels_, _Vertical Addressable Video in lines_ and _Vertical Blanking in lines_
 
 #### 3 Byte CVT Codes
 
@@ -199,7 +197,7 @@ It has one of four possible values:
 - RGB 4:4:4 & YCbCr 4:2:2
 - RGB 4:4:4 & YCbCr 4:4:4 & YCbCr 4:2:2
 
-This value MUST be transformed into `urn:x-nmos:cap:format:color_sampling` with `enum` values according to those permitted by the [NMOS Parameter Registers - Capabilities][NMOS Capabilities] section and added to each Constraint Set.
+This value MUST be transformed into `urn:x-nmos:cap:format:color_sampling` with `enum` values according to those permitted by [capabilities Parameter Registry](https://specs.amwa.tv/nmos-parameter-registers/branches/main/capabilities/#color-sampling) and MUST be added to each Constraint Set.
 
 #### CTA-861 Extension Block
 
@@ -211,7 +209,7 @@ YCbCr 4:2:0 Video Data Block ([CTA-861][CTA-861] section 7.5.10) marks timings a
 
 ## Audio Receivers
 
-If Basic Audio support bit is active in the CTA Extension Header, audio receiver MUST have Receiver Capabilities.
+If the Basic Audio support bit is active in the CTA Extension Header, audio receiver MUST have Receiver Capabilities.
 
 When no descriptors are provided, the capabilities MUST contain:
 
@@ -233,7 +231,6 @@ Each of these Parameter Constraints MUST use `enum` Constraint Keyword.
 [IS-04]: https://specs.amwa.tv/is-04 "AMWA IS-04 NMOS Discovery and Registration Specification (Stable)"
 [IS-11]: https://specs.amwa.tv/is-11 "AMWA IS-11 NMOS Flow Compatibility Management"
 [BCP-004-01]: https://specs.amwa.tv/bcp-004-01/ "AMWA NMOS Receiver Capabilities"
-[NMOS Capabilities]: https://github.com/AMWA-TV/nmos-parameter-registers/blob/main/capabilities/README.md "AMWA NMOS Parameter Registers - NMOS Capabilities"
 [E-EDID]: https://vesa.org/vesa-standards/ "VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2"
 [DMT]: https://vesa.org/vesa-standards/ "VESA and Industry Standards and Guidelines for Computer Display Monitor Timing (DMT) Version 1.0, Rev. 12"
 [CTA-861]: https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g "A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)"
