@@ -209,6 +209,10 @@ YCbCr 4:2:0 Capability Map Data Block ([CTA-861][CTA-861] section 7.5.11) shows 
 
 YCbCr 4:2:0 Video Data Block ([CTA-861][CTA-861] section 7.5.10) marks timings as supporting only `YCbCr-4:2:0`. Constraint Set associated with these timings MUST have `urn:x-nmos:cap:format:color_sampling` limited to `YCbCr-4:2:0`.
 
+### Color component depth
+
+_Color Bit Depth_ of _Video Input Definition_ described in [E-EDID A2][E-EDID] section 3.6.1 MUST be transformed into `urn:x-nmos:cap:format:component_depth` and MUST be added to each Constraint Set.
+
 ## Audio Receivers
 
 If Basic Audio support bit is active in the CTA Extension Header, audio receiver MUST have Receiver Capabilities.
