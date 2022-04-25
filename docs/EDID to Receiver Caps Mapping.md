@@ -143,16 +143,15 @@ The mapping is defined in section 3.10.2 and is applied as follows:
   - `numerator` MUST be calculated using _Pixel Clock_
   - `denominator` MUST be calculated with _Horizontal Addressable Video in pixels_, _Horizontal Blanking in pixels_, _Vertical Addressable Video in lines_ and _Vertical Blanking in lines_
 
-#### 3 Byte CVT Codes
+#### CVT 3 Byte Codes
 
-3 Byte CVT Code structure is defined in [E-EDID][E-EDID] section 3.10.3.8.
+CVT 3 Byte Code structure is defined in [E-EDID][E-EDID] section 3.10.3.8.
 
-- `urn:x-nmos:cap:format:frame_height` MUST be calculated using value of the CVT Code
-- `urn:x-nmos:cap:format:frame_width` MUST be calculated with Frame Height and _Aspect Ratio_
+- `urn:x-nmos:cap:format:frame_height` MUST be set according to _Addressable Lines per Field_
+- `urn:x-nmos:cap:format:frame_width` MUST be calculated with _Addressable Lines per Field_ and _Aspect Ratio_
+- `urn:x-nmos:cap:format:grain_rate` MUST be set according to _Supported Vertical Rate and Blanking Style_
 
-_Preferred Vertical Rate_ united with the frame width and height makes a Constraint Set and SHOULD have a `urn:x-nmos:cap:meta:preference` value off `50`
-
-Each _Supported Vertical Rate_, except _Preferred Vertical Rate_, MUST be extracted to a new Constraint Set with the same frame width and height.
+The _Preferred Vertical Rate_ SHOULD be indicated by using a higher `urn:x-nmos:cap:meta:preference` value in Constraint Set(s) describing this value vs. other _Supported Vertical Rates_.
 
 #### DMT Standard Codes & IDs Summary
 
