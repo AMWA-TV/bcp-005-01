@@ -48,48 +48,11 @@ The timing descriptors MAY include one or more of the following mappings:
 
 Video timing modes with Reduced Blanking MAY be determined by the exact `urn:x-nmos:cap:format:grain_rate`.
 
-#### Established Timings I, II & III
+#### Established Timings
 
-Each Established Timing is an ID associated with a predefined frame width, height and rate and interlace mode. Mapping the first two types are defined in [E-EDID][E-EDID] section 3.8 and the last in [E-EDID][E-EDID] section 3.10.3.9.
+An Established Timing is a predefined video mode consisting of frame width, height and rate and interlace mode. There are three blocks of Established Timings described in [E-EDID][E-EDID]. Established Timings I and II are defined in [E-EDID][E-EDID] section 3.8 and Established Timings III in [E-EDID][E-EDID] section 3.10.3.9.
 
-<details><summary>Example: Established Timings I & II</summary>
-
-For example, given the three bytes of Established Timings I & II were `20 08 00` then the receiver capabilies could contain the following in its constraint sets
-
-```json
-[
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 640 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 480 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  },
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 1024 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 768 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  }
-]
-```
-
-</details>
+[Example](./Examples.md#established-timings)
 
 #### Standard Timings
 
@@ -100,30 +63,7 @@ Standard Timing Definitions (STD) format is defined in [E-EDID][E-EDID] section 
 - `urn:x-nmos:cap:format:grain_rate` MUST be calculated with _Field Refresh Rate_
 - `urn:x-nmos:cap:format:interlace_mode` MUST be set to `progressive`
 
-<details><summary>Example: Standard Timings</summary>
-
-For example, given the bytes of Standard Timings were `D1 C0 01 01 01 01 01 01 01 01 01 01 01` then the receiver capabilies could contain the following in its constraint sets
-
-```json
-[
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 1080 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 1920 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  }
-]
-```
-
-</details>
+[Example](./Examples.md#standard-timings)
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
