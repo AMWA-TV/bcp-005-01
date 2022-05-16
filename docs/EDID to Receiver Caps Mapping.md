@@ -61,11 +61,13 @@ Standard Timing Definitions (STD) format is defined in [E-EDID][E-EDID] section 
 - `urn:x-nmos:cap:format:grain_rate` MUST be calculated with _Field Refresh Rate_
 - `urn:x-nmos:cap:format:interlace_mode` MUST be set to `progressive`
 
+Some of STDs are described in [DMT][DMT] with more precise vertical frequencies than _Field Refresh Rate_. Such STDs SHOULD be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
+
 [Example](./Examples.md#standard-timings)
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
-Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. The first, _Preferred Timing Mode_ is an obligation and MUST have a `urn:x-nmos:cap:meta:preference` value of `100`. Any Detailed Timing Descriptors in [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
+Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. The first, _Preferred Timing Mode_ is an obligation and MUST have the highest `urn:x-nmos:cap:meta:preference` value amid the Constraint Sets. Detailed Timing Descriptors describing _Native Video Formats_ MUST have higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native. Any Detailed Timing Descriptors in [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
 
 The mapping is defined in section 3.10.2 and is applied as follows:
 
@@ -92,7 +94,9 @@ Video Data Block is defined in [CTA-861][CTA-861] section 7.5.1.
 
 It operates with Video Identification Codes (VICs), each of them is associated with a union of frame width, height and rate and interlace mode. This mapping is defined in [CTA-861][CTA-861] section 4.1.
 
-Some of VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rates.
+If the first VIC takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the related Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value amid the Constraint Sets, taking precedence over the Constraint Set related to the _Preferred Timing Mode_. VICs describing _Native Video Formats_ MUST be described with higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native.
+
+Some of VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
 
 ### Color subsampling
 
@@ -154,4 +158,5 @@ Each of these Parameter Constraints MUST use `enum` Constraint Keyword.
 [IS-11]: https://specs.amwa.tv/is-11 "AMWA IS-11 NMOS Flow Compatibility Management"
 [BCP-004-01]: https://specs.amwa.tv/bcp-004-01/ "AMWA NMOS Receiver Capabilities"
 [E-EDID]: https://vesa.org/vesa-standards/ "VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2"
+[DMT]: https://vesa.org/vesa-standards/ "VESA and Industry Standards and Guidelines for Computer Display Monitor Timing (DMT) Version 1.0, Rev. 12"
 [CTA-861]: https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g "A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)"
