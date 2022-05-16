@@ -179,7 +179,7 @@ Video Data Block is defined in [CTA-861][CTA-861] section 7.5.1.
 
 It operates with Video Identification Codes (VICs), each of them is associated with a union of frame width, height and rate and interlace mode. This mapping is defined in [CTA-861][CTA-861] section 4.1.
 
-Some of VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting the both frame rates.
+Some of VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rates.
 
 ### Color subsampling
 
@@ -214,7 +214,7 @@ Vendor-Specific Data Block ([CTA-861][CTA-861] section 7.5.4) SHOULD be transfor
 
 ### Colorspace
 
-Colorimetry Data Block ([CTA-861][CTA-861] section 7.5.5) SHOULD be transformed into `urn:x-nmos:cap:format:colorspace` if contains related information.
+Colorimetry Data Block ([CTA-861][CTA-861] section 7.5.5) SHOULD be transformed into `urn:x-nmos:cap:format:colorspace` with related information if present.
 
 ## Audio Receivers
 
