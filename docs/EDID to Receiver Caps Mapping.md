@@ -21,7 +21,7 @@ The term 'Output' used in this document is defined in [IS-11][IS-11].
 
 BCP-005-01 is intended to be used in conjunction with an [IS-11][IS-11] and [BCP-004-01][BCP-004-01] deployment; however it has been written in such a way to provide useful functionality even in the absence of such a system.
 
-This document is targeted against [E-EDID A2][E-EDID] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861-G][CTA-861] Extension Block imposed by HDMI. The information present in the EDID is subject to the requirements of the [Display Monitor Timing (DMT)][DMT] specification Version 1 Rev 12.
+This document is targeted against [E-EDID A2][E-EDID] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861-G][CTA-861] Extension Block imposed by HDMI.
 
 ## Use of Normative Language
 
@@ -46,48 +46,11 @@ The video mode descriptors MAY include one or more of the following mappings:
 - `urn:x-nmos:cap:format:interlace_mode`
 - `urn:x-nmos:cap:meta:preference`
 
-#### Established Timings I, II & III
+#### Established Timings
 
-Each Established Timing is an ID associated with a predefined frame width, height and rate and interlace mode. Mapping the first two types are defined in [E-EDID][E-EDID] section 3.8 and the last in [E-EDID][E-EDID] section 3.10.3.9.
+An Established Timing is a predefined video mode consisting of frame width, height and rate and interlace mode. There are three blocks of Established Timings described in [E-EDID][E-EDID]. Established Timings I and II are defined in [E-EDID][E-EDID] section 3.8 and Established Timings III in [E-EDID][E-EDID] section 3.10.3.9.
 
-<details><summary>Example: Established Timings I & II</summary>
-
-For example, given the three bytes of Established Timings I & II were `20 08 00` then the receiver capabilies could contain the following in its constraint sets
-
-```json
-[
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 640 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 480 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  },
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 1024 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 768 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  }
-]
-```
-
-</details>
+[Example](./Examples.md#established-timings)
 
 #### Standard Timings
 
@@ -96,35 +59,9 @@ Standard Timing Definitions (STD) format is defined in [E-EDID][E-EDID] section 
 - `urn:x-nmos:cap:format:frame_width` MUST be calculated from the _Horizontal Active Pixel Count_
 - `urn:x-nmos:cap:format:frame_height` MUST be calculated using the _Frame Width_ and _Image Aspect Ratio_
 - `urn:x-nmos:cap:format:grain_rate` MUST be calculated with _Field Refresh Rate_
+- `urn:x-nmos:cap:format:interlace_mode` MUST be set to `progressive`
 
-Additionally, defined in [DMT][DMT] section 1 are the interlace mode for (STD) codes
-
-- `urn:x-nmos:cap:format:interlace_mode` MUST be set according Table 1-1 Standards and Guidelines
-
-<details><summary>Example: Standard Timings</summary>
-
-For example, given the bytes of Standard Timings were `D1 C0 01 01 01 01 01 01 01 01 01 01 01` then the receiver capabilies could contain the following in its constraint sets
-
-```json
-[
-  {
-    "urn:x-nmos:cap:format:frame_width": {
-      "enum": [ 1080 ]
-    },
-    "urn:x-nmos:cap:format:frame_height": {
-      "enum": [ 1920 ]
-    },
-    "urn:x-nmos:cap:format:interlace_mode": {
-      "enum": [ "progressive" ]
-    },
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [ { "numerator": 60 } ]
-    }
-  }
-]
-```
-
-</details>
+[Example](./Examples.md#standard-timings)
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
@@ -148,30 +85,6 @@ CVT 3 Byte Code structure is defined in [E-EDID][E-EDID] section 3.10.3.8.
 - `urn:x-nmos:cap:format:grain_rate` MUST be set according to _Supported Vertical Rate and Blanking Style_
 
 The _Preferred Vertical Rate_ SHOULD be indicated by using a higher `urn:x-nmos:cap:meta:preference` value in Constraint Set(s) describing this value vs. other _Supported Vertical Rates_.
-
-#### DMT Standard Codes & IDs Summary
-
-DMT Codes are used to augment the Standard Timing Descriptors and CVT Codes for some EDID IDs. Extra calcuations are REQUIRED to obtain the exact frame rate as per [DMT][DMT] section 2 and section 4.
-
-- `urn:x-nmos:cap:format:grain_rate` MUST be calculated and represent the exact frame rate. The rational MUST be reduced to the smallest possible numerator.
-
-<details><summary>Example: DMT Standard Codes</summary>
-
-For example, the EDID with ID `DMT ID: 45h; Std. 2 Byte Code: (D1, 00)h; CVT 3 Byte Code: (57, 28, 28)h` then the receiver capabilies could contain the following in its constraint sets
-
-```jsonc
-[
-  {
-    "urn:x-nmos:cap:format:grain_rate": {
-      "enum": [
-        { "numerator": 2403125, "denominator": 40338 } // When reduced by GCD of 80
-      ]
-    }
-  }
-]
-```
-
-</details>
 
 #### Video Data Block
 
@@ -241,5 +154,4 @@ Each of these Parameter Constraints MUST use `enum` Constraint Keyword.
 [IS-11]: https://specs.amwa.tv/is-11 "AMWA IS-11 NMOS Flow Compatibility Management"
 [BCP-004-01]: https://specs.amwa.tv/bcp-004-01/ "AMWA NMOS Receiver Capabilities"
 [E-EDID]: https://vesa.org/vesa-standards/ "VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2"
-[DMT]: https://vesa.org/vesa-standards/ "VESA and Industry Standards and Guidelines for Computer Display Monitor Timing (DMT) Version 1.0, Rev. 12"
 [CTA-861]: https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g "A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)"
