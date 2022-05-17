@@ -94,9 +94,9 @@ Video Data Block is defined in [CTA-861][CTA-861] section 7.5.1.
 
 It operates with Video Identification Codes (VICs), each of them is associated with a union of frame width, height and rate and interlace mode. This mapping is defined in [CTA-861][CTA-861] section 4.1.
 
-If the first VIC takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the related Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value amid the Constraint Sets, taking precedence over the Constraint Set related to the _Preferred Timing Mode_. VICs describing _Native Video Formats_ MUST be described with higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native.
+If the first VIC takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the related Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets, taking precedence over the Constraint Set related to the _Preferred Timing Mode_. VICs describing _Native Video Formats_ MUST be described with higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native.
 
-Some of VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
+Some VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
 
 ### Color subsampling
 
