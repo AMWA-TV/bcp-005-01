@@ -31,7 +31,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 If an [IS-04][IS-04] Video Receiver is associated with an Output which has an EDID, the optional mapping of the EDID supported video formats into Receiver's Capabilities SHALL be performed according to the rules below.
 
-### Video Modes
+### Video Mode Mappings
 
 Video modes, described in [E-EDID][E-EDID], provide information about the video frame size and frame rate. There are multiple blocks which keep information about these modes, each has its own mapping requirements.
 
@@ -48,26 +48,24 @@ The video mode descriptors MAY include one or more of the following mappings:
 
 #### Established Timings
 
-An Established Timing is a predefined video mode consisting of frame width, height and rate and interlace mode. There are three blocks of Established Timings described in [E-EDID][E-EDID]. Established Timings I and II are defined in [E-EDID][E-EDID] section 3.8 and Established Timings III in [E-EDID][E-EDID] section 3.10.3.9.
+Three blocks of Established Timings, described in the form of video mode lists, indicate support of industry de-facto video modes. Established Timings I and II are defined in [E-EDID][E-EDID] section 3.8 and Established Timings III in [E-EDID][E-EDID] section 3.10.3.9. Both sections give information about frame width, height and rate and interlace mode for each of the listed video modes.
 
 [Example](./Examples.md#established-timings)
 
 #### Standard Timings
 
-Standard Timing Definitions (STD) format is defined in [E-EDID][E-EDID] section 3.9. The mapping is as follows:
+Standard Timings describe industry de-facto video modes that are not listed in the Established Timings. Standard Timings format is defined in [E-EDID][E-EDID] section 3.9. The mapping is as follows:
 
 - `urn:x-nmos:cap:format:frame_width` MUST be calculated from the _Horizontal Active Pixel Count_
 - `urn:x-nmos:cap:format:frame_height` MUST be calculated using the _Frame Width_ and _Image Aspect Ratio_
 - `urn:x-nmos:cap:format:grain_rate` MUST be calculated with _Field Refresh Rate_
 - `urn:x-nmos:cap:format:interlace_mode` MUST be set to `progressive`
 
-Some of STDs are described in [DMT][DMT] with more precise vertical frequencies than _Field Refresh Rate_. Such STDs SHOULD be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
-
 [Example](./Examples.md#standard-timings)
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
-Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. The first, _Preferred Timing Mode_ is an obligation and MUST have the highest `urn:x-nmos:cap:meta:preference` value amid the Constraint Sets. Detailed Timing Descriptors describing _Native Video Formats_ MUST have higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native. Any Detailed Timing Descriptors in [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
+Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. Each Detailed Timing Descriptors in Base EDID and [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
 
 The mapping is defined in section 3.10.2 and is applied as follows:
 
@@ -88,17 +86,31 @@ CVT 3 Byte Code structure is defined in [E-EDID][E-EDID] section 3.10.3.8.
 
 The _Preferred Vertical Rate_ SHOULD be indicated by using a higher `urn:x-nmos:cap:meta:preference` value in Constraint Set(s) describing this value vs. other _Supported Vertical Rates_.
 
-#### Video Data Block
+#### Short Video Descriptors
 
-Video Data Block is defined in [CTA-861][CTA-861] section 7.5.1.
+Short Video Descriptor (SVD) format is defined in [CTA-861][CTA-861] section 7.5.1.
 
-It operates with Video Identification Codes (VICs), each of them is associated with a union of frame width, height and rate and interlace mode. This mapping is defined in [CTA-861][CTA-861] section 4.1.
+It operates with Video Identification Codes (VICs). Each of them is associated with a union of frame width, height and rate and interlace mode. This mapping is defined in [CTA-861][CTA-861] section 4.1.
 
-If the first VIC takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the related Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets, taking precedence over the Constraint Set related to the _Preferred Timing Mode_. VICs describing _Native Video Formats_ MUST be described with higher `urn:x-nmos:cap:meta:preference` values than video modes not marked as native.
+### Vertical Frequency Discrepancy
 
-Some VICs are marked as associated with two flavours of the same mode: with a frame rate that is an integer multiple of 6 Hz and a frame rate adjusted by a factor of 1000/1001. Such VICs MUST be described with `urn:x-nmos:cap:format:grain_rate` supporting both frame rate values.
+[E-EDID][E-EDID] describes video timings which actual vertical frequency may not be equal to the grain rate of the corresponding video mode.
 
-### Color subsampling
+Established Timings, Standard Timings and CVT 3 Byte Codes operate with video mode descriptions with integer vertical frequencies although these video modes correspond to video timings with fractional vertical frequencies (some of these timings are described in [DMT][DMT]).
+
+Describing such video modes in Receiver Capabilities is implementation specific. `urn:x-nmos:cap:format:grain_rate` in corresponding Constraint Set(s) MUST describe vertical frequency from either the video mode or the video timings and MAY describe both.
+
+Some VICs ([CTA-861][CTA-861] section 4.1) are marked as associated with two flavours of the same mode: with a vertical frequency that is an integer multiple of 6 Hz and a vertical frequency adjusted by a factor of 1000/1001. `urn:x-nmos:cap:format:grain_rate` in corresponding Constraint Set(s) MUST describe at least one of these vertical frequencies and MAY describe both.
+
+### Video Mode Preference
+
+The first Detailed Timing Descriptors in [E-EDID][E-EDID], called _Preferred Timing Mode_, is always present and the Constraint Set(s) that represent it MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets.
+
+If the first Short Video Descriptor takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the corresponding Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets, taking precedence over the Constraint Set that represent the _Preferred Timing Mode_.
+
+Constraint Sets for Detailed Timing Descriptors and Short Video Descriptors describing _Native Video Formats_ MUST have higher `urn:x-nmos:cap:meta:preference` values than Constraint Sets for video modes not marked as native.
+
+### Color Subsampling
 
 If EDID doesn't have the [CTA-861][CTA-861] Extension Block, color subsampling formats MUST be taken from Base EDID, otherwise from the Extenstion Block.
 
@@ -123,7 +135,7 @@ YCbCr 4:2:0 Capability Map Data Block ([CTA-861][CTA-861] section 7.5.11) shows 
 
 YCbCr 4:2:0 Video Data Block ([CTA-861][CTA-861] section 7.5.10) marks video modes as supporting only `YCbCr-4:2:0`. Constraint Sets associated with these video modes MUST have `urn:x-nmos:cap:format:color_sampling` limited to `YCbCr-4:2:0`.
 
-### Color component depth
+### Color Component Depth
 
 _Color Bit Depth_ of _Video Input Definition_ described in [E-EDID A2][E-EDID] section 3.6.1 MUST be transformed into `urn:x-nmos:cap:format:component_depth` and MUST be added to each Constraint Set.
 
