@@ -98,7 +98,7 @@ It operates with Video Identification Codes (VICs). Each of them is associated w
 
 Established Timings, Standard Timings and CVT 3 Byte Codes operate with video mode descriptions with integer vertical frequencies although these video modes correspond to video timings with fractional vertical frequencies (some of these timings are described in [DMT][DMT]).
 
-Describing such video modes in Receiver Capabilities is implementation specific. `urn:x-nmos:cap:format:grain_rate` in corresponding Constraint Set(s) MUST describe vertical frequency from either the video mode or the video timings and MAY describe both.
+Describing such video modes in Receiver Capabilities is implementation specific and depend on what network stream the Receiver can handle. `urn:x-nmos:cap:format:grain_rate` in corresponding Constraint Set(s) MUST describe vertical frequency from either the video mode or the video timings and MAY describe both.
 
 Some VICs ([CTA-861][CTA-861] section 4.1) are marked as associated with two flavours of the same mode: with a vertical frequency that is an integer multiple of 6 Hz and a vertical frequency adjusted by a factor of 1000/1001. `urn:x-nmos:cap:format:grain_rate` in corresponding Constraint Set(s) MUST describe at least one of these vertical frequencies and MAY describe both.
 
