@@ -65,7 +65,7 @@ Standard Timings describe industry de-facto video modes that are not listed in t
 
 #### Detailed Timing Descriptors (18 Byte Descriptors)
 
-Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. Each Detailed Timing Descriptors in Base EDID and [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
+Defined in [E-EDID][E-EDID] section 3.10, there are 4 possible descriptors which can be provided. Each Detailed Timing Descriptor in Base EDID and [CTA-861][CTA-861] Extension Block (section 7.2.1) MUST follow the mapping.
 
 The mapping is defined in section 3.10.2 and is applied as follows:
 
@@ -104,7 +104,7 @@ Some VICs ([CTA-861][CTA-861] section 4.1) are marked as associated with two fla
 
 ### Video Mode Preference
 
-The first Detailed Timing Descriptors in [E-EDID][E-EDID], called _Preferred Timing Mode_, is always present and the Constraint Set(s) that represent it MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets.
+The first Detailed Timing Descriptor in [E-EDID][E-EDID], called _Preferred Timing Mode_, is always present and the Constraint Set(s) that represent it MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets.
 
 If the first Short Video Descriptor takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the corresponding Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets, taking precedence over the Constraint Set that represent the _Preferred Timing Mode_.
 
