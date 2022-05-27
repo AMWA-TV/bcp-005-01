@@ -104,15 +104,13 @@ Some VICs ([CTA-861][CTA-861] section 4.1) are marked as associated with two fla
 
 ### Video Mode Preference
 
-The first Detailed Timing Descriptor in [E-EDID][E-EDID], called _Preferred Timing Mode_, is always present and the Constraint Set(s) that represent it MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets.
-
-If the first Short Video Descriptor takes precedence over _Preferred Timing Mode_ (as described in [CTA-861][CTA-861] section 7.5), then the corresponding Constraint Set MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets, taking precedence over the Constraint Set that represent the _Preferred Timing Mode_.
-
 Constraint Sets for Detailed Timing Descriptors and Short Video Descriptors describing _Native Video Formats_ MUST have higher `urn:x-nmos:cap:meta:preference` values than Constraint Sets for video modes not marked as native.
+
+The Constraint Set for the first Detailed Timing Descriptor in Base EDID, called _Preferred Timing Mode_, or the Constraint Set for the first Short Video Descriptor in the first CTA-861 Extension if it takes precedence ([CTA-861][CTA-861] section 7.5) MUST have the highest `urn:x-nmos:cap:meta:preference` value among the Constraint Sets.
 
 ### Color Subsampling
 
-If EDID doesn't have the [CTA-861][CTA-861] Extension Block, color subsampling formats MUST be taken from Base EDID, otherwise from the Extenstion Block.
+If an [E-EDID][E-EDID] doesn't have any [CTA-861][CTA-861] Extensions, color subsampling formats MUST be taken from Base EDID, otherwise from the Extenstions.
 
 #### Base EDID
 
@@ -127,7 +125,7 @@ It has one of four possible values:
 
 This value MUST be transformed into `urn:x-nmos:cap:format:color_sampling` with `enum` values according to those permitted by [capabilities Parameter Registry](https://specs.amwa.tv/nmos-parameter-registers/branches/main/capabilities/#color-sampling) and MUST be added to each Constraint Set.
 
-#### CTA-861 Extension Block
+#### CTA-861 Extension
 
 The supported color subsampling formats in the CTA Extension Header ([CTA-861][CTA-861] section 7.5) indicate `YCbCr-4:2:2` and `YCbCr-4:4:4` support in addition to `RGB`.
 
