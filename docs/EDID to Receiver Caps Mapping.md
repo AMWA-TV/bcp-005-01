@@ -110,7 +110,7 @@ The Constraint Set for the first Detailed Timing Descriptor in Base EDID, called
 
 ### Color Subsampling
 
-If an [E-EDID][E-EDID] doesn't have any [CTA-861][CTA-861] Extensions, color subsampling formats MUST be taken from Base EDID, otherwise from the Extenstions.
+If an [E-EDID][E-EDID] doesn't have any [CTA-861][CTA-861] Extensions, color subsampling formats MUST be taken from Base EDID, otherwise from the Extensions.
 
 #### Base EDID
 
