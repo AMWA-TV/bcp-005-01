@@ -22,7 +22,7 @@ The term 'Output' used in this document is defined in [IS-11][].
 
 BCP-005-01 is intended to be used in conjunction with an [IS-11][] and [BCP-004-01][] deployment; however it has been written in such a way to provide useful functionality even in the absence of such a system.
 
-This document is targeted against [E-EDID][] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861][] Extension Block imposed by HDMI.
+This document is targeted against [E-EDID][] which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as _Base EDID_ and the [CTA-861][] Extension Block.
 
 ## Use of Normative Language
 
