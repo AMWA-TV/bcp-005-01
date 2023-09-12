@@ -1,4 +1,4 @@
-# AMWA BCP-005-01: EDID to NMOS Receiver Capabilities Mapping \[Work In Progress\]
+# AMWA BCP-005-01: EDID to NMOS Receiver Capabilities Mapping
 {:.no_toc}
 
 * A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
