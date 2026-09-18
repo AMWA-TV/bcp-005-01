@@ -1,0 +1,692 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://specs.amwa.tv/new/bcp-005-01/v1.0.0/EDID%20to%20Receiver%20Caps%20Mapping/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.62">
+    
+    
+      
+        <title>AMWA BCP-005-01: EDID to NMOS Receiver Capabilities Mapping - AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.ce62732f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/amwa-branding.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#amwa-bcp-005-01-edid-to-nmos-receiver-capabilities-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping" class="md-header__button md-logo" aria-label="AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AMWA BCP-005-01: EDID to NMOS Receiver Capabilities Mapping
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/AMWA-TV/bcp-005-01" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AMWA-TV/bcp-005-01
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping" class="md-nav__button md-logo" aria-label="AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AMWA-TV/bcp-005-01" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AMWA-TV/bcp-005-01
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  AMWA BCP-005-01 NMOS EDID to Receiver Capabilities Mapping
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduction
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-normative-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Use of Normative Language
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-receivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Video Receivers
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Video Receivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-mode-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Video Mode Mappings
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Video Mode Mappings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#established-timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Established Timings
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Standard Timings
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-timing-descriptors-18-byte-descriptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Detailed Timing Descriptors (18 Byte Descriptors)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cvt-3-byte-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CVT 3 Byte Codes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-video-descriptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Short Video Descriptors
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical-frequency-discrepancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Vertical Frequency Discrepancy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-mode-preference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Video Mode Preference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-subsampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Color Subsampling
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Color Subsampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-edid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Base EDID
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cta-861-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CTA-861 Extension
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-component-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Color Component Depth
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Colorspace
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-receivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Audio Receivers
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio Receivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-audio-descriptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Short Audio Descriptors
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="amwa-bcp-005-01-edid-to-nmos-receiver-capabilities-mapping">AMWA BCP-005-01: EDID to NMOS Receiver Capabilities Mapping</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The purpose of AMWA BCP-005-01 is to provide Best Current Practice guidelines for mapping EDID fields to Receiver Capabilities in the case Receiver is associated with an Output connected to a downstream counterpart which provides EDID.</p>
+<p>The proposed mapping provides the mechanism for converting EDID information into Receiver Capabilities.
+The effective Receiver Capabilities MAY differ from those obtained from the proposed mapping when the Receiver is:</p>
+<ul>
+<li>Capable of altering signal (e.g. it is able to consume 4K and downscale it before passing to the Output which downstream counterpart supports up to HD resolutions)</li>
+<li>Constrained beyond the capabilities of the downstream counterpart of the Output (e.g. it supports resolution up to 1080p but the Output is connected to a 4K monitor)</li>
+</ul>
+<p>The term 'Receiver' used in this document is defined in <a href="https://specs.amwa.tv/is-04" title="AMWA IS-04 NMOS Discovery and Registration Specification (Stable)">IS-04</a>.</p>
+<p>The terms 'Parameter Constraint' and 'Constraint Set' used in this document are defined in <a href="https://specs.amwa.tv/bcp-004-01/" title="AMWA NMOS Receiver Capabilities">BCP-004-01</a>.</p>
+<p>The term 'Output' used in this document is defined in <a href="https://specs.amwa.tv/is-11" title="AMWA IS-11 NMOS Flow Compatibility Management">IS-11</a>.</p>
+<p>BCP-005-01 is intended to be used in conjunction with an <a href="https://specs.amwa.tv/is-11" title="AMWA IS-11 NMOS Flow Compatibility Management">IS-11</a> and <a href="https://specs.amwa.tv/bcp-004-01/" title="AMWA NMOS Receiver Capabilities">BCP-004-01</a> deployment; however it has been written in such a way to provide useful functionality even in the absence of such a system.</p>
+<p>This document is targeted against <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> which consist of EDID 1.4 (and covers EDID 1.3) and is referred to as <em>Base EDID</em> and the <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> Extension Block.</p>
+<h2 id="use-of-normative-language">Use of Normative Language</h2>
+<p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in <a href="https://tools.ietf.org/html/rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC 2119</a>.</p>
+<h2 id="video-receivers">Video Receivers</h2>
+<p>If an <a href="https://specs.amwa.tv/is-04" title="AMWA IS-04 NMOS Discovery and Registration Specification (Stable)">IS-04</a> Video Receiver is associated with an Output which has an EDID, the optional mapping of the EDID supported video formats into Receiver's Capabilities SHALL be performed according to the rules below.</p>
+<h3 id="video-mode-mappings">Video Mode Mappings</h3>
+<p>Video modes, described in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a>, provide information about the video frame size and frame rate.
+There are multiple blocks which keep information about these modes, each has its own mapping requirements.</p>
+<p>Each video mode SHOULD be expressed in the Receiver's Capabilities as a separate Constraint Set or a part of a more common Constraint Set with non-empty</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:frame_width</code></li>
+<li><code>urn:x-nmos:cap:format:frame_height</code></li>
+<li><code>urn:x-nmos:cap:format:grain_rate</code></li>
+</ul>
+<p>The video mode descriptors MAY include one or more of the following mappings:</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:interlace_mode</code></li>
+<li><code>urn:x-nmos:cap:meta:preference</code></li>
+</ul>
+<h4 id="established-timings">Established Timings</h4>
+<p>Three blocks of Established Timings, described in the form of video mode lists, indicate support of industry de-facto video modes.
+Established Timings I and II are defined in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.8 and Established Timings III in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.10.3.9.
+Both sections give information about frame width, height and rate and interlace mode for each of the listed video modes.</p>
+<p><a href=".././Examples/#established-timings">Example</a></p>
+<h4 id="standard-timings">Standard Timings</h4>
+<p>Standard Timings describe industry de-facto video modes that are not listed in the Established Timings.
+Standard Timings format is defined in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.9.
+The mapping is as follows:</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:frame_width</code> MUST be calculated from the <em>Horizontal Active Pixel Count</em></li>
+<li><code>urn:x-nmos:cap:format:frame_height</code> MUST be calculated using the <em>Frame Width</em> and <em>Image Aspect Ratio</em></li>
+<li><code>urn:x-nmos:cap:format:grain_rate</code> MUST be calculated with <em>Field Refresh Rate</em></li>
+<li><code>urn:x-nmos:cap:format:interlace_mode</code> MUST be set to <code>progressive</code></li>
+</ul>
+<p><a href=".././Examples/#standard-timings">Example</a></p>
+<h4 id="detailed-timing-descriptors-18-byte-descriptors">Detailed Timing Descriptors (18 Byte Descriptors)</h4>
+<p>Defined in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.10, there are 4 possible descriptors which can be provided.
+Each Detailed Timing Descriptor in Base EDID and <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> Extension Block (section 7.2.1) MUST follow the mapping.</p>
+<p>The mapping is defined in section 3.10.2 and is applied as follows:</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:interlace_mode</code> MUST be set according to <em>Signal Interface Type</em> defined in table 3.22</li>
+<li><code>urn:x-nmos:cap:format:frame_width</code> MUST be <em>Horizontal Addressable Video in pixels</em></li>
+<li><code>urn:x-nmos:cap:format:frame_height</code> MUST be calculated using the <em>Vertical Addressable Video in lines</em> which MUST be multiplied by 2 when <em>Signal Interface Type</em> indicates interlaced</li>
+<li><code>urn:x-nmos:cap:format:grain_rate</code> is represented by</li>
+<li><code>numerator</code> which MUST be calculated using <em>Pixel Clock</em></li>
+<li><code>denominator</code> which MUST be calculated with <em>Horizontal Addressable Video in pixels</em>, <em>Horizontal Blanking in pixels</em>, <em>Vertical Addressable Video in lines</em> and <em>Vertical Blanking in lines</em></li>
+</ul>
+<h4 id="cvt-3-byte-codes">CVT 3 Byte Codes</h4>
+<p>CVT 3 Byte Code structure is defined in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.10.3.8.</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:frame_height</code> MUST be set according to <em>Addressable Lines per Field</em></li>
+<li><code>urn:x-nmos:cap:format:frame_width</code> MUST be calculated with <em>Addressable Lines per Field</em> and <em>Aspect Ratio</em></li>
+<li><code>urn:x-nmos:cap:format:grain_rate</code> MUST be set according to <em>Supported Vertical Rate and Blanking Style</em></li>
+</ul>
+<p>The <em>Preferred Vertical Rate</em> SHOULD be indicated by using a higher <code>urn:x-nmos:cap:meta:preference</code> value in Constraint Set(s) describing this value vs. other <em>Supported Vertical Rates</em>.</p>
+<h4 id="short-video-descriptors">Short Video Descriptors</h4>
+<p>Short Video Descriptor (SVD) format is defined in <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.1.</p>
+<p>It operates with Video Identification Codes (VICs).
+Each of them is associated with a union of frame width, height and rate and interlace mode.
+This mapping is defined in <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 4.1.</p>
+<h3 id="vertical-frequency-discrepancy">Vertical Frequency Discrepancy</h3>
+<p><a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> describes video timings which actual vertical frequency may not be equal to the grain rate of the corresponding video mode.</p>
+<p>Established Timings, Standard Timings and CVT 3 Byte Codes operate with video mode descriptions with integer vertical frequencies although these video modes correspond to video timings with fractional vertical frequencies (some of these timings are described in <a href="https://vesa.org/vesa-standards/" title="VESA and Industry Standards and Guidelines for Computer Display Monitor Timing (DMT) Version 1.0, Rev. 12">DMT</a>).</p>
+<p>Describing such video modes in Receiver Capabilities is implementation specific and depend on what network stream the Receiver can handle.
+<code>urn:x-nmos:cap:format:grain_rate</code> in corresponding Constraint Set(s) MUST describe vertical frequency from either the video mode or the video timings and MAY describe both.</p>
+<p>Some VICs (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 4.1) are marked as associated with two flavours of the same mode: with a vertical frequency that is an integer multiple of 6 Hz and a vertical frequency adjusted by a factor of 1000/1001.
+<code>urn:x-nmos:cap:format:grain_rate</code> in corresponding Constraint Set(s) MUST describe at least one of these vertical frequencies and MAY describe both.</p>
+<h3 id="video-mode-preference">Video Mode Preference</h3>
+<p>Constraint Sets for Detailed Timing Descriptors and Short Video Descriptors describing <em>Native Video Formats</em> MUST have higher <code>urn:x-nmos:cap:meta:preference</code> values than Constraint Sets for video modes not marked as native.</p>
+<p>The Constraint Set for the first Detailed Timing Descriptor in Base EDID, called <em>Preferred Timing Mode</em>, or the Constraint Set for the first Short Video Descriptor in the first CTA-861 Extension if it takes precedence (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5) MUST have the highest <code>urn:x-nmos:cap:meta:preference</code> value among the Constraint Sets.</p>
+<h3 id="color-subsampling">Color Subsampling</h3>
+<p>If an <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> doesn't have any <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> Extensions, color subsampling formats MUST be taken from Base EDID, otherwise from the Extensions.</p>
+<h4 id="base-edid">Base EDID</h4>
+<p>The origin of supported color subsampling formats in Base EDID is the Feature Support in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.6.4.</p>
+<p>It has one of four possible values:</p>
+<ul>
+<li>RGB 4:4:4</li>
+<li>RGB 4:4:4 &amp; YCbCr 4:4:4</li>
+<li>RGB 4:4:4 &amp; YCbCr 4:2:2</li>
+<li>RGB 4:4:4 &amp; YCbCr 4:4:4 &amp; YCbCr 4:2:2</li>
+</ul>
+<p>This value MUST be transformed into <code>urn:x-nmos:cap:format:color_sampling</code> with <code>enum</code> values according to those permitted by <a href="https://specs.amwa.tv/nmos-parameter-registers/branches/main/capabilities/#color-sampling">capabilities Parameter Registry</a> and MUST be added to each Constraint Set.</p>
+<h4 id="cta-861-extension">CTA-861 Extension</h4>
+<p>The supported color subsampling formats in the CTA Extension Header (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5) indicate <code>YCbCr-4:2:2</code> and <code>YCbCr-4:4:4</code> support in addition to <code>RGB</code>.</p>
+<p>YCbCr 4:2:0 Capability Map Data Block (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.11) shows which video modes support <code>YCbCr-4:2:0</code> in addition to subsampling formats listed in the CTA Extension Header.
+Constraint Sets associated with these video modes MUST contain <code>YCbCr-4:2:0</code> within the possible values for <code>urn:x-nmos:cap:format:color_sampling</code>.</p>
+<p>YCbCr 4:2:0 Video Data Block (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.10) marks video modes as supporting only <code>YCbCr-4:2:0</code>.
+Constraint Sets associated with these video modes MUST have <code>urn:x-nmos:cap:format:color_sampling</code> limited to <code>YCbCr-4:2:0</code>.</p>
+<h3 id="color-component-depth">Color Component Depth</h3>
+<p><em>Color Bit Depth</em> of <em>Video Input Definition</em> described in <a href="https://vesa.org/vesa-standards/" title="VESA Enhanced Extended Display Identification Data Standard Release A, Revision 2">E-EDID</a> section 3.6.1 MUST be transformed into <code>urn:x-nmos:cap:format:component_depth</code> and MUST be added to each Constraint Set.</p>
+<p>Vendor-Specific Data Block (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.4) SHOULD be transformed into <code>urn:x-nmos:cap:format:component_depth</code> if contains related information.</p>
+<h3 id="colorspace">Colorspace</h3>
+<p>Colorimetry Data Block (<a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.5) SHOULD be transformed into <code>urn:x-nmos:cap:format:colorspace</code> with related information if present.</p>
+<h2 id="audio-receivers">Audio Receivers</h2>
+<p>If the Basic Audio support bit is active in the CTA Extension Header, audio receiver MUST have Receiver Capabilities.</p>
+<p>When no descriptors are provided, the capabilities MUST contain:</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:media_type</code> MUST be equal to <code>audio/L8</code></li>
+<li><code>urn:x-nmos:cap:format:channel_count</code> MUST be equal to 2</li>
+</ul>
+<h3 id="short-audio-descriptors">Short Audio Descriptors</h3>
+<p>If there are Short Audio Descriptors (see <a href="https://shop.cta.tech/products/a-dtv-profile-for-uncompressed-high-speed-digital-interfaces-cta-861-g" title="A DTV Profile for Uncompressed High Speed Digital Interfaces (CTA-861-G)">CTA-861</a> section 7.5.2), then each of them MUST be transformed into a Constraint Set.</p>
+<ul>
+<li><code>urn:x-nmos:cap:format:media_type</code> MUST be determined with <em>Audio Format Code</em></li>
+<li>Linear PCM bit depth MUST be taken from the third Short Audio Descriptors byte</li>
+<li><code>urn:x-nmos:cap:format:channel_count</code> MUST be determined by <em>Number of Channels</em></li>
+<li><code>urn:x-nmos:cap:format:sample_rate</code> MUST be filled with <em>Sampling Frequencies</em></li>
+</ul>
+<p>Each of these Parameter Constraints MUST use <code>enum</code> Constraint Keyword.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8dcc8e9c.min.js"></script>
+      
+        <script src="../javascripts/json-viewer.js"></script>
+      
+        <script src="../javascripts/amwa-branding.js"></script>
+      
+    
+  </body>
+</html>
